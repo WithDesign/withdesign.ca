@@ -1,0 +1,1133 @@
+.logo {
+  display: inline;
+}
+
+%text-shadow {
+  @include shadow((
+    type: light,
+    level: 1,
+    text: text,
+  )...);
+}
+
+@mixin text-shadow-3 {
+  @include shadow((
+    type: light,
+    level: 4,
+    text: text,
+  )...);
+}
+
+@include create-keyframe(fadeIn);
+@include create-keyframe(fadeOut);
+
+.btn-cta-1 {
+  display: inline-block;
+  padding: 15px 20px;
+  text-align: center;
+  background-color: color(brand, secondary);
+  color: color(greyscale, white);
+  font-weight: 600;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+}
+
+.breif-modal-active {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.brief-modal {
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  background: rgba(color(brand, info), 0.5);
+  width: 100%;
+  left: 0;
+  height: 100vh;
+  overflow-y: scroll;
+  animation: fadeIn 0.35s ease-in-out forwards;
+
+  .brief-header {
+    padding: 50px 20px;
+    text-align: center;
+    color: color(greyscale, white);
+    background-color: color(brand, secondary);
+    border: {
+      top-left-radius: 10px;
+      top-right-radius: 10px;
+    }
+  }
+
+  .sub-text {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    @include font-size(16px);
+  }
+
+  .close-btn {
+    float: right;
+    position: sticky;
+    top: 15px;
+    z-index: 1000;
+    padding: 1px 5px;
+    margin: 10px;
+    background: color(brand, secondary);
+    border: 4px solid color(brand, info) {
+      radius: 50%;
+    }
+    color: color(brand, info);
+    line-height: 1;
+    cursor: pointer;
+    @include font-size(30px);
+
+    @include breakpoint(md) {
+      right: 10px;
+    }
+
+    &:hover {
+      color: darken(color(brand, secondary), 15%);
+    }
+  }
+
+  .wrapper {
+    position: relative;
+    box-sizing: border-box;
+    background: color(greyscale, white);
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border: {
+      radius: 10px;
+    }
+    @include shadow(4, light);
+
+    @include breakpoint(md) {
+      margin: 25px auto;
+    }
+  }
+}
+
+.package {
+  @include breakpoint(max-width breakpoint-value(lg)) {
+    padding: 0 0 25px 0 !important;
+  }
+}
+
+.package-callout {
+  color: color(brand, info);
+  @include breakpoint(md) {
+    padding: 60px 0;
+  }
+
+  h2 {
+    margin-top: 0;
+    font-weight: 600;
+  }
+
+  p {
+    line-height: 1.4;
+    @include font-size(24px);
+  }
+
+  i {
+    color: color(brand, info);
+    @include font-size(45px);
+  }
+}
+
+.highlight-callout {
+  box-sizing: border-box;
+  position: absolute;
+  top: -10px;
+  padding: 10px 10px 20px;
+  background-color: color(brand, secondary);
+  border: 4px solid darken(color(brand, secondary), 10%) {
+    radius: 10px;
+  }
+  text-align: center;
+  color: color(greyscale, white);
+  width: 100%;
+  @include font-size(20px);
+  text-transform: uppercase;
+  font-weight: 700;
+
+  @include breakpoint(min-width breakpoint-value(lg)) {
+    @include calc(width, 100%, "100% - 30px");
+  }
+}
+
+.package-wrapper {
+  position: relative;
+  padding: 25px 20px;
+  margin-top: 35px;
+  border-radius: 10px;
+  background-color: lighten(color(brand, default), 44%);
+  border: 4px solid rgba(color(brand, info), 0.5);
+  color: color(brand, info);
+  @include shadow(1, light);
+  line-height: 1.4;
+
+  .price {
+    font-weight: 700;
+    line-height: 2;
+    @include font-size(20px);
+
+    .sale {
+      text-decoration: line-through;
+      line-height: 2;
+      display: block;
+      color: rgba(color(brand, secondary), 0.2);
+      @include font-size(14px);
+    }
+  }
+
+  a,
+  button {
+    margin-top: 40px;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 0px;
+    background-color: color(brand, secondary);
+    color: color(greyscale, white);
+    font-weight: 600;
+    border: none {
+      radius: 10px;
+    }
+    width: 100%;
+    @extend .transition;
+
+    &:hover {
+      background-color: color(brand, primary);
+    }
+  }
+
+  &.highlight {
+    @include shadow(3, light);
+    @extend .bg-white;
+    border: 4px solid color(brand, secondary);
+
+    i {
+      color: color(brand, secondary);
+    }
+  }
+
+  h5 {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  p {
+    ul {
+      margin: 0 0 15px;
+      padding: 0;
+
+      li {
+        padding: 25px 0;
+        list-style-type: none;
+        @include font-size(18px);
+        font-weight: 400;
+        border-bottom: 1px solid rgba(color(brand, info), 0.1);
+
+        &:first-child {
+          border-top: 1px solid rgba(color(brand, info), 0.1);
+        }
+      }
+    }
+  }
+}
+
+.callout-wrapper {
+  position: relative;
+  z-index: 1;
+
+  .text-container {
+    max-width: 700px;
+    width: 100%;
+    border: {
+      right: 4px solid color(brand, info);
+      top: 4px solid color(brand, info);
+      //radius: 10px;
+    }
+
+    @include breakpoint(md) {
+      float: right;
+      padding: 30px;
+    }
+  }
+
+  h2 {
+    text-transform: uppercase;
+    color: color(brand, info);
+    width: 100%;
+    max-width: 700px;
+
+    @include breakpoint(max-width breakpoint-value(md)) {
+      float: right;
+      @include font-size(22px);
+    }
+  }
+
+  h4,
+  h5,
+  h6 {
+    width: 100%;
+    max-width: 700px;
+    color: color(brand, info);
+    line-height: 1.5;
+    @include breakpoint(max-width breakpoint-value(md)) {
+      @include font-size(18px);
+    }
+
+    strong {
+      font-weight: 700;
+      text-shadow: 5px 7px 15px rgba(50, 50, 93, 0.2);
+    }
+  }
+
+  p {
+  }
+
+  a,
+  button {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 15px;
+    @extend .text-center, .pull-right;
+  }
+}
+
+.icon-image {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 15px;
+  max-width: 50px;
+}
+
+.cta-4 {
+  margin-top: 40px;
+  border: none;
+}
+
+.faq-section {
+  @include breakpoint(md) {
+    padding: 60px 0;
+  }
+
+  p {
+    padding: 0 15px;
+    font-weight: 300;
+    @include font-size(16px);
+  }
+
+  a,
+  button {
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 0px;
+    background-color: color(brand, secondary);
+    color: color(greyscale, white);
+    font-weight: 600;
+    border: {
+      radius: 10px;
+    }
+    width: 100%;
+    @extend .transition;
+
+    &:hover {
+      background-color: color(brand, primary);
+    }
+  }
+
+  .toggle-wrapper {
+    margin-top: 20px;
+    cursor: pointer;
+
+    &.toggle-wrapper-open {
+      .toggle {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+
+    .toggle {
+      width: 100%;
+      font-weight: 600;
+      text-align: left;
+      padding: 15px 15px;
+      box-sizing: border-box;
+      //background-color: transparent;
+      color: color(brand, info);
+      background-color: lighten(color(brand, default), 44%);
+      border: 4px solid rgba(color(brand, info), 0.5) {
+        radius: 4px;
+      }
+      cursor: pointer;
+      @extend .transition;
+    }
+
+    .open {
+      padding: 10px;
+      background-color: lighten(color(brand, default), 44%);
+      border: {
+        bottom: 4px solid rgba(color(brand, info), 0.5);
+        right: 4px solid rgba(color(brand, info), 0.5);
+        left: 4px solid rgba(color(brand, info), 0.5);
+        bottom-left-radius: 10px;
+        bottom-right-radius: 10px;
+      }
+    }
+  }
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.nav-wrapper {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  @extend .container;
+
+  img {
+    max-width: 200px;
+  }
+}
+
+nav {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  @include shadow(rd, 3);
+
+  a {
+  }
+
+  .btn {
+    padding: 10px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: color(greyscale, black);
+    @include breakpoint(max-width breakpoint-value(lg)) {
+      padding: 10px;
+    }
+  }
+}
+
+.banner {
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 700px;
+  max-height: 900px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: color(brand, secondary);
+
+  @include calc(height, 100vh, "100vh - 88px");
+
+  @include breakpoint(max-width breakpoint-value(lg)) {
+    @include font-size(24px);
+  }
+
+  .icon {
+    text-align: center;
+    opacity: 1;
+    padding-top: 40px;
+
+    i {
+      @include font-size(34px);
+    }
+  }
+
+  .logo {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .banner-bottom {
+    position: relative;
+    max-width: 700px;
+    margin: 15px auto 0;
+    mix-blend-mode: luminosity;
+  }
+
+  .btn {
+    position: relative;
+    padding: 15px 25px;
+    color: darken(color(brand, secondary), 40%);
+    border: 4px solid lighten(color(brand, secondary), 30%) {
+      radius: 4px;
+    };
+    background: darken(color(greyscale, white), 0%);
+    @include shadow(rd, 3);
+    font-weight: 600;
+    @extend .clear-button, .transition;
+    @include font-size(18px);
+
+    &:hover {
+      @include transform(translateY(2px));
+      color: darken(color(brand, secondary), 80%) !important;
+    }
+  }
+
+  h1 {
+    opacity: 1;
+    line-height: 1.5;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: lighten(color(greyscale, white), 10%);
+    @include font-size(55px);
+
+    @include breakpoint(max-width breakpoint-value(lg)) {
+      @include font-size(30px);
+    }
+
+    a {
+      position: relative;
+      padding: 0 5px;
+      top: -35px;
+      color: darken(color(brand, secondary), 40%) !important;
+      text-decoration: underline;
+      font-weight: 400;
+
+      @include font-size(24px);
+      @extend .transition;
+
+      &:hover {
+        top: -30px;
+        color: darken(color(brand, secondary), 50%) !important;
+      }
+    }
+
+    span {
+      text-decoration: underline;
+    }
+  }
+
+  h2 {
+    max-width: 900px;
+    line-height: 1.6;
+    margin: 0 auto 25px;
+    color: darken(color(brand, secondary), 40%);
+    @include font-size(18px);
+  }
+
+  .wrapper {
+    max-width: 100%;
+  }
+}
+
+.btn-cta {
+  background: color(greyscale, white);
+  color: color(greyscale, black);
+  border: 4px solid color(brand, secondary) {
+    radius: 4px;
+  }
+
+  @include shadow(5px 5px rgba(color(brand,secondary), 0.1));
+  @extend .transition;
+  &:hover {
+    @include box-shadow(1px 1px rgba(color(brand, secondary), 0.3));
+  }
+}
+
+.process-intro {
+  padding-top: 50px;
+
+  img {
+    display: inline-block;
+    max-width: 40px;
+    max-height: 40px;
+    margin-right: 10px;
+  }
+
+  h2 {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 40px;
+    @include font-size(28px);
+
+    span {
+      position: absolute;
+      left: -10px;
+      font-weight: 700;
+      top: 20px;
+      z-index: -1;
+      opacity: 0.1;
+      color: color(brand, secondary);
+      @include font-size(150px);
+    }
+  }
+
+  p {
+    margin-top: 0;
+    padding-left: 20px;
+    font-weight: 300;
+    @include font-size(15px);
+  }
+}
+
+.btn-cta-2 {
+  background: transparent;
+  color: color(brand, info);
+  border: 4px solid color(brand, info) {
+    radius: 4px;
+  }
+  text-decoration: none;
+  font-weight: 600;
+
+  @include shadow(5px 5px rgba(color(brand,primary), 0.1));
+  @extend .transition;
+  &:hover {
+    @include shadow(5px 5px rgba(color(brand,primary), 0.3));
+  }
+}
+
+.expertise {
+  padding: 75px 0;
+  background-color: rgba(color(brand, secondary), 0.1);
+  position: relative;
+
+  h2 {
+    text-transform: uppercase;
+    margin: 0;
+    color: color(brand, secondary);
+
+    & + p {
+      color: color(brand, secondary);
+    }
+  }
+
+  h4 {
+    color: color(brand, info);
+    margin-top: 4px;
+    @extend .h6;
+
+    & + span {
+      display: block;
+      margin-bottom: 35px;
+      @include font-size(13px);
+      color: color(brand, info);
+    }
+  }
+}
+
+.client-wrapper {
+  padding: 100px 0;
+  position: relative;
+
+  .company-image {
+    max-width: 30px;
+  }
+
+  h3 {
+    @extend .h2;
+    color: color(brand, info);
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 100px;
+    @include font-size(80px);
+
+    & + p {
+      position: relative;
+      z-index: 1;
+      font-weight: 300;
+      line-height: 35px;
+      color: color(brand, info);
+      @include font-size(20px);
+    }
+  }
+}
+
+img.funnel {
+  position: absolute;
+  width: 300px;
+  z-index: -1;
+  opacity: 0.1;
+  top: 00px;
+
+  &.right {
+    right: 0;
+  }
+
+  &.left {
+    left: 0;
+  }
+}
+
+.cta-bar {
+  margin-bottom: 25px;
+
+  button {
+    border: 0 {
+      radius: 4px;
+    }
+    text-transform: uppercase;
+    text-decoration: underline;
+    background-color: transparent; //rgba(color(brand, secondary), 0.9);
+    color: color(brand, info);
+    font-weight: 600;
+    @include font-size(18px);
+
+    &:hover {
+      color: rgba(color(brand, info), 0.8);
+      @include transform(translateY(2px));
+      @extend .transition;
+    }
+  }
+}
+
+.client-brands {
+  padding: 20px 0;
+  margin-bottom: 50px;
+  background-color: #e6eaec;
+
+  .logo-wrapper {
+    @extend .container;
+    margin: 0 auto;
+
+    @extend .row;
+
+    img {
+      max-width: 75px;
+      margin: 0 auto;
+      opacity: 0.4;
+    }
+
+    div {
+      text-align: center;
+      @extend .col-xs-4, .col-md;
+    }
+  }
+}
+
+.partner-wrapper {
+  h2,
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: color(brand, info);
+
+    & + p {
+      text-align: center;
+      font-weight: 300;
+      color: color(brand, info);
+      @include font-size(20px);
+    }
+  }
+}
+
+.partner-single {
+  margin-bottom: 50px;
+  border-radius: 10px;
+  padding: 25px;
+
+  &.logos {
+    border: 4px solid #04a77a;
+    background: rgba(#04a77a, 0.1);
+
+    .link {
+      background: #04a77a;
+
+      &:hover {
+        background: darken(#04a77a, 10%);
+      }
+    }
+  }
+
+  &.interface {
+    border: 4px solid #24c2cb;
+    background: rgba(#24c2cb, 0.1);
+
+    .link {
+      background: #24c2cb;
+
+      &:hover {
+        background: darken(#24c2cb, 10%);
+      }
+    }
+  }
+
+  img {
+    border-radius: 10px;
+  }
+
+  .link {
+    box-sizing: border-box;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    color: color(greyscale, white);
+  }
+}
+
+.cases {
+  padding: 75px 0 0;
+  position: relative;
+
+  aside {
+    position: sticky;
+    top: 10px;
+  }
+
+  .case {
+    border: 4px solid color(brand, info);
+    background: rgba(color(brand, info), 0.1);
+    a {
+      &:first-child {
+        color: color(brand, info);
+        font-weight: 600;
+        @include font-size(20px);
+
+        img {
+          padding-bottom: 10px;
+        }
+      }
+    }
+
+    .link {
+      background: color(brand, info);
+
+      &:hover {
+        background: darken(color(brand, info), 10%);
+      }
+    }
+  }
+}
+
+.who-for {
+  padding: 100px 0 150px;
+  position: relative;
+  text-align: center;
+
+  h2 {
+    color: color(brand, info);
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 100px;
+    @include font-size(80px);
+  }
+
+  p {
+    position: relative;
+    z-index: 1;
+    //padding-top: 80px;
+    font-weight: 300;
+    line-height: 35px;
+    color: color(brand, info);
+    @include font-size(20px);
+    //@extend .col-xs-8;
+  }
+
+  img {
+    pointer-events: none;
+  }
+
+  .phone {
+    max-width: 300px;
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    opacity: 0.2;
+  }
+
+  .thumbs {
+    left: 1%;
+    bottom: 75px;
+  }
+
+  .world {
+    right: 40%;
+    bottom: 30px;
+  }
+
+  .box {
+    right: 26%;
+    top: 175px;
+  }
+
+  .money {
+    left: 10%;
+    top: 100px;
+  }
+
+  .credit {
+    left: 30%;
+    bottom: 110px;
+  }
+
+  .sm {
+    max-width: 75px;
+    position: absolute;
+    opacity: 0.2;
+  }
+}
+
+.btn-signup {
+  margin: 15px;
+  background: color(greyscale, white);
+  color: color(greyscale, black);
+  border: 2px solid color(greyscale, black) {
+    radius: 4px;
+  }
+}
+
+.email {
+  padding: 15px !important;
+}
+
+.btn-cta,
+.btn-signup {
+  padding: 15px 25px;
+  text-decoration: none;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+}
+
+.cta-section {
+  padding-top: 30px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+h1 {
+  color: color(brand, info);
+}
+
+.text-white {
+  color: color(greyscale, white);
+}
+
+.content-wrapper {
+  padding: 15px;
+  //background-color: color(brand, default); //darken(color(greyscale, white), 5%);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  @include breakpoint(md) {
+    padding: 30px 0;
+  }
+}
+
+.signup-input-wrapper {
+  text-align: center;
+
+  .signup-input {
+    max-width: 400px;
+  }
+
+  input {
+    max-width: 300px;
+  }
+
+  button {
+    @extend .btn-cta, .mar-20-top;
+  }
+}
+
+input:invalid,
+textarea:invalid {
+  box-shadow: none;
+}
+
+.signup-input-wrapper,
+.bid-input-wrapper {
+  border: {
+    bottom: 2px solid color(greyscale, black);
+  }
+
+  .signup-input-label {
+    display: block;
+    font-weight: 600;
+    @include font-size(24px);
+    @extend .text-upper, .mar-10-bottom;
+  }
+
+  .bid-input-label {
+    display: block;
+    font-weight: 600;
+    line-height: 1.4;
+    color: color(brand, info);
+    @include font-size(20px);
+    @extend .mar-20-bottom, .mar-20-top;
+  }
+
+  .bid-input,
+  input {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px 20px;
+    border: 2px solid color(brand, info) {
+      radius: 4px;
+    }
+
+    @extend .clear-button, .transition;
+
+    &:focus {
+      border: 2px solid color(brand, default) {
+        radius: 4px;
+      }
+    }
+  }
+
+  .btn-submit {
+    display: block;
+    padding: 15px 20px;
+    text-align: center;
+    background-color: color(brand, primary);
+    color: color(greyscale, white);
+    font-weight: 600;
+    border-radius: 4px;
+  }
+}
+
+.pack-wrapper {
+  position: relative;
+  padding: 10px 0 0;
+  margin-bottom: 15px;
+
+  input {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 10;
+    opacity: 0;
+
+    &:checked + label {
+      border: 2px solid rgba(color(brand, secondary), 1);
+      background-color: rgba(color(brand, secondary), 0.05);
+      &:after {
+        border: 2px solid rgba(color(brand, secondary), 1);
+      }
+
+      &:before {
+        color: rgba(color(brand, secondary), 1);
+        content: "\f00c";
+        font-size: 20px;
+      }
+    }
+  }
+
+  label {
+    font-weight: 600;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    border: 2px solid rgba(color(brand, info), 1) {
+      radius: 10px;
+    }
+    padding: 10px;
+    color: color(brand, info);
+
+    &:before {
+      display: inline-block;
+      position: absolute;
+      right: 17px;
+      top: 17px;
+      font: normal normal normal 20px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    &:after {
+      position: absolute;
+      content: "";
+      z-index: 2;
+      right: 10px;
+      top: 10px;
+      display: block;
+      width: 30px;
+      height: 30px;
+      border: 2px solid color(brand, info) {
+        radius: 4px;
+      }
+    }
+
+    ul {
+      font-weight: 400;
+      margin: 20px 0 0 0;
+      padding: 0;
+
+      li {
+        margin: 5px 0;
+        padding: 5px 0;
+        border: {
+          bottom: 1px solid rgba(color(brand, info), 0.1);
+        }
+        list-style-type: none;
+      }
+    }
+  }
+}
+
+.bg-primary {
+  background: color(brand, primary);
+}
+
+@include create-keyframe(slideInDown);
+
+.modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 110vh;
+  overflow: scroll;
+  background-color: color(brand, support);
+}
+
+.modal-close {
+  position: absolute;
+  z-index: 1000;
+  top: 15px;
+  right: 15px;
+  text-decoration: underline;
+  font-weight: 600;
+  @include font-size(24px);
+}
+
+.toggle-wrapper-open {
+  & + .container {
+    display: none;
+  }
+}
+
+.process-wrapper {
+  img {
+    max-width: 50px;
+    //margin: 0 auto;
+  }
+
+  h4 {
+    margin-top: 10px;
+  }
+}

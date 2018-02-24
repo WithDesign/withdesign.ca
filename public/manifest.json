@@ -1,0 +1,52 @@
+{
+  "name": "InterfaceWithDesign",
+  "short_name": "WithDesign",
+  "lang": "en-US",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "display": "standalone",
+  "start_url": ".",
+  "background_color": "#082E41",
+  "theme_color": "#082E41",
+  "description": "Interface With Design can turn your sketches and wireframes into beautiful UI concepts or production-ready UI designs with unlimited revisions & on-demand requests. We can also handle any branding needs you business or startup may have. Start with us today!",
+  "icons": [{
+     "src": "\/favicon-36.png",
+     "sizes": "36x36",
+     "type": "image\/png",
+     "density": "0.75"
+    },
+    {
+     "src": ".\/img\/touch\/favicon-64.png",
+     "sizes": "64x64",
+     "type": "image\/png",
+     "density": "1.0"
+    },
+    {
+     "src": ".\/img\/touch\/favicon-72.png",
+     "sizes": "72x72",
+     "type": "image\/png",
+     "density": "1.5"
+    },
+    {
+     "src": ".\/img\/touch\/favicon-96.png",
+     "sizes": "96x96",
+     "type": "image\/png",
+     "density": "2.0"
+    },
+    {
+     "src": ".\/img\/touch\/favicon-144.png",
+     "sizes": "144x144",
+     "type": "image\/png",
+     "density": "3.0"
+    },
+    {
+     "src": ".\/img\/touch\/favicon-192.png",
+     "sizes": "192x192",
+     "type": "image\/png",
+     "density": "4.0"
+  }],
+  "related_applications": [{
+    "platform": "web",
+    "url": "http://interfacewithdesign.com"
+  }]
+}
