@@ -16,6 +16,7 @@
 .btn {
   font-family: font-family(primary);
   cursor: pointer;
+  text-decoration: none;
 }
 
 .control-dots .dot {
@@ -95,6 +96,14 @@
 
 .text-info {
   color: lighten(color(brand, info), 0%);
+}
+
+h1 {
+  color: color(brand, info);
+}
+
+.text-white {
+  color: color(greyscale, white);
 }
 
 * {

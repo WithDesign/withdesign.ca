@@ -1,21 +1,28 @@
-import React from "react";
-import { Route, IndexRoute } from "react-router";
-import App from "./containers/App";
-import HomePage from "./containers/Home";
-import Process from "./containers/Process";
-import About from "./containers/About";
-import Policy from "./containers/Policy";
-import Partners from "./containers/Partners";
-import Contact from "./components/Contact/ContactFormWrapper";
+import React from 'react';
+import { Route, IndexRoute, Redirect } from 'react-router';
+import App from './containers/App';
+import HomePage from './containers/Home';
+import Process from './containers/Process';
+import About from './containers/About';
+import Policy from './containers/Policy';
+import Partners from './containers/Partners';
+import Contact from './components/Contact/ContactFormWrapper';
+import GetStarted from './containers/GetStarted';
+import Error404 from './containers/404';
+import Research from './containers/Research';
 
 const routes = (
   <Route onUpdate={() => window.scrollTo(0, 0)} path="/" component={App}>
     <IndexRoute component={HomePage} />
     <Route path="policy" component={Policy} />
-    <Route path="Contact" component={Contact} />
-    <Route path="Process" component={Process} />
-    <Route path="Partners" component={Partners} />
-    <Route path="About" component={About} />
+    <Route path="contact" component={Contact} />
+    <Route path="solutions" component={Process} />
+    <Route path="partners" component={Partners} />
+    <Route path="about" component={About} />
+    <Route path="research" component={Research} />
+    <Route path="start" component={GetStarted} />
+    <Route path="404" component={Error404} />
+    <Redirect from="*" to="/404" />
   </Route>
 );
 

@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import PageHead from '../components/Head';
 import Header from '../components/Header';
-import Bid from '../components/Bid';
-// import PageContent from '../components/Content/PageContent';
+import Footer from '../components/Footer';
+import { Link } from 'react-router';
 
 const propTypes = {
   className: PropTypes.string,
@@ -14,106 +14,198 @@ const defaultProps = {
   className: '',
 };
 
-function getLogos() {
-  return [
-    {
-      type: 'logo',
-      logoImg: './free-logos/a-logoswithdesign-freelogo.svg',
-    },
-    {
-      type: 'logo',
-      logoImg: './free-logos/ab-logoswithdesign-freelogo.svg',
-    },
-    {
-      type: 'logo',
-      logoImg: './free-logos/s-logoswithdesign-freelogo.svg',
-    },
-    {
-      type: 'logo',
-      logoImg: './free-logos/k-logoswithdesign-freelogo.svg',
-    },
-    {
-      type: 'logo',
-      logoImg: './free-logos/av-logoswithdesign-freelogo.svg',
-    },
-    {
-      type: 'logo',
-      logoImg: './free-logos/al-logoswithdesign-freelogo.svg',
-    },
-  ]
-};
-
-
-class About extends Component {
-  render () {
+class Process extends Component {
+  render() {
     const {
       className,
     } = this.props;
 
-    const logos = getLogos();
-
     return (
-      <div className={`modal ${className}`}>
+      <div className="solutions">
         <PageHead
-          title={`With Design | `}
-          description={``}
+          title={'With Design | '}
+          description={''}
           url="https://withdesign.ca/"
         />
         <Header />
-        <div className="container mar-30-top content-wrapper  pad-30-right pad-30-left pad-30-bottom mar-30-bottom">
-          <img className="img-responsive mar-30-top" src="./img/logo.svg" alt="Logos.withdesign" />
-          <h1 className="mar-10-bottom mar-15-top text-upper weight-400 text-primary">Professional made logos & brands.</h1>
-          <div className="custom-logo-content">
+        <div className="page-intro process-header">
+          <h1 className="text-center text-upper text-white">What We Can Solve <br /><span className="weight-300">that will help you achive your goals!</span></h1>
+          {/* <p className="text-center h5 text-white weight-300">
+            We partner with the best & the brightest designers & marketers
+            to meet your every expectations.
+          </p> */}
+          <div className="container">
             <div className="row">
-              <div className="col-xs-12 col-sm-12 col-md-6">
-                <h3 className="weight-400 text-upper">Who We Are & What We Do</h3>
-                <p>We are a small ambitious branding agency helping growing businesses & entrepreneurs build their brand. We like to focus on making high quality, world class logo designs accessible for all startups at a very flexible price. Our work can be seen in places all around the world! Submit a bid to get started!</p>
-                <h3 className="weight-400 text-upper">Our Process</h3>
-                <div className="row process-wrapper">
-                  <div className="col-xs-12 col-sm-6">
-                    <img className="img-responsive" src="./img/chat.svg" alt="" />
-                    <h4 className="mar-10-bottom weight-400">Step 1</h4>
-                    <p className="mar-10-top weight-400"><strong>Name a Fair & Honest Price.</strong> We have flexible pricing that fits any budget. We will then contact you within 24 hours with confirmation.</p>
-                  </div>
-                  <div className="col-xs-12 col-sm-6">
-                    <img className="img-responsive" src="./img/pencil.svg" alt="" />
-                    <h4 className="mar-10-bottom weight-400">Step 2</h4>
-                    <p className="mar-10-top weight-400">We will then create your vision! <strong>Get unlimited revisions in the process.</strong> We're not happy until you're 100% satisfied!</p>
-                  </div>
-                  <div className="col-xs-12 col-sm-6">
-                    <img className="img-responsive" src="./img/Happy-Mac.svg" alt="" />
-                    <h4 className="mar-10-bottom weight-400">Step 3</h4>
-                    <p className="mar-10-top weight-400">Once you are happy, You will <strong> recieve a custom made logo</strong> with the <strong> vector files + exclusive rights</strong> for your logo.</p>
-                  </div>
-                </div>
-                <hr />
-                <div className="examples-wrapper">
-                  <h6 className="mar-10-top mar-15-bottom">Examples Of Our Work</h6>
-                  <div className="row no-margin">
-                    {logos.map(logo => (
-                      <div className="col-xs-6 col-sm-4 pad-15-top">
-                        <figure className="no-margin">
-                          <img className="img-responsive" src={logo.logoImg} alt="logo" />
-                        </figure>
-                      </div>
-                    ))};
-                  </div>
+              <div className="col-xs-12 col-md-6">
+                <img
+                  className="img-responsive process-header-img"
+                  src="./img/process-top.svg"
+                  alt="Logo Example"
+                />
+                <div className="text-black icon text-left">
+                  <a href="#process">
+                    Our Process <br />
+                    <i className="fa fa-angle-down" aria-hidden="true" />
+                  </a>
                 </div>
               </div>
-              <div className="col-xs-12 col-sm-12 col-md-6">
-                <h5 className="mar-15-bottom pad-30-top mar-15-top text-upper weight-300 text-primary">Fill out the form to <span className="weight-600">start the custom logo process.</span></h5>
-                <Bid />
+              <div className="col-xs-12 col-md-6 text-white">
+                <div className="no-mar-top mar-15-bottom weight-300">
+                  Brand & sales growth eCommerce Stores, Product Funnel,
+                  & Direct Responce Sales Pages. Brand & sales growth eCommerce Stores, Product Funnel,
+                  & Direct Responce Sales Pages.
+                </div>
+                <div className="row expertise-wrapper">
+                  <div className="col-xs-6">
+                    {/* <img className="img-responsive" src="./img/concept.svg" alt="" /> */}
+                    <h6 className="no-mar-top mar-15-bottom weight-400">
+                      Research & Strategy Development
+                    </h6>
+                    <span>
+                      Idea crteation, Competitor Analysis, User reasearch, &
+                      Keyword research just to start
+                    </span>
+                  </div>
+                  <div className="col-xs-6">
+                    {/* <img className="img-responsive" src="./img/concept.svg" alt="" /> */}
+                    <h6 className="no-mar-top mar-15-bottom weight-400">
+                      ROI centered UI & UX
+                    </h6>
+                    <span>
+                      Brand & sales growth for any pf your ecomm stores,
+                      Product Funnel, and any of your other projects.
+                    </span>
+                  </div>
+                  <div className="col-xs-6">
+                    {/* <img className="img-responsive" src="./img/concept.svg" alt="" /> */}
+                    <h6 className="mar-15-bottom weight-400">
+                      Testing & Optimzation
+                    </h6>
+                    <span>
+                      Converstiion Optimization, A/B Testing, Site
+                      Performance Improvments, SEO & Keyword Optimization.
+                    </span>
+                  </div>
+                  <div className="col-xs-6">
+                    {/* <img className="img-responsive" src="./img/concept.svg" alt="" /> */}
+                    <h6 className="mar-15-bottom weight-400">
+                      Brand Analysis & development.
+                    </h6>
+                    <span>
+                      Brand & sales growth eCommerce Stores, Product Funnel,
+                      & Direct Responce Sales Pages.
+                    </span>
+                  </div>
+                </div>
+                <button className="btn btn-banner text-center mar-30-top" onClick={this.handleClick}>
+                  Unlock My Brands Potential Today!
+                </button>
               </div>
             </div>
           </div>
-          <h6 className="text-center mar-30-bottom mar-30-top weight-300 text-primary"><small>With Design | A digital agency.</small></h6>
         </div>
+        <div className="no-mar-top no-pad-top content-wrapper pad-30-right pad-30-left">
+          <div className="process-wrapper container">
+            <div className="row no-margin">
+              <div className="col-xs-12 no-pad col-md-6">
+                <div id="process" className="">
+                  <img
+                    className="img-responsive process-img"
+                    src="./img/process-2.svg"
+                    alt="Logo Example"
+                  />
+                </div>
+              </div>
+              <div className="col-xs-11 col-md-6">
+                <div className="content-column">
+                  <p>
+                    We'll help you produce clean, professional and world class
+                    looking products without the hassle. Stop wasting precious
+                    time on freelance job boards and get world class work done
+                    insanely fast.
+                  </p>
+                  <h6 className="mar-15-bottom weight-400">
+                    Testing & Optimzation
+                  </h6>
+                  <span>
+                    Converstiion Optimization, A/B Testing, Site
+                    Performance Improvments, SEO & Keyword Optimization.
+                  </span>
+                  <h6 className="mar-15-bottom weight-400">
+                    Testing & Optimzation
+                  </h6>
+                  <span>
+                    Converstiion Optimization, A/B Testing, Site
+                    Performance Improvments, SEO & Keyword Optimization.
+                  </span>
+                  <h6 className="mar-15-bottom weight-400">
+                    Testing & Optimzation
+                  </h6>
+                  <span>
+                    Converstiion Optimization, A/B Testing, Site
+                    Performance Improvments, SEO & Keyword Optimization.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="past-results">
+            <div className="container">
+              <h2 className="text-upper weight-600">Past Results</h2>
+              <div className="row no-margin" >
+                <div className="col-xs-12 col-md-6">
+                  <img
+                    className="img-responsive process-img"
+                    src="./img/process-top.svg"
+                    alt="Logo Example"
+                  />
+                  <h4>Heading</h4>
+                  <p>
+                    We'll help you produce clean, professional and world class
+                    looking products without the hassle. Stop wasting precious
+                    time on freelance job boards and get world class work done
+                    insanely fast.
+                  </p>
+                </div>
+                <div className="col-xs-12 col-md-6">
+                  <img
+                    className="img-responsive process-img"
+                    src="./img/process-top.svg"
+                    alt="Logo Example"
+                  />
+                  <h4>Heading</h4>
+                  <p>
+                    We'll help you produce clean, professional and world class
+                    looking products without the hassle. Stop wasting precious
+                    time on freelance job boards and get world class work done
+                    insanely fast.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h6 className="weight-600 text-center">
+            <img
+              className="img-resonsive icon-image"
+              src="./img/money-back.svg"
+              alt="money back"
+            />Money Back Guarantee*<br />
+            <small className="weight-400">
+              Try it, Risk-Free with no hastle. Not happy with the process 7
+              days in? We'll give you a full refund.
+            </small>
+          </h6>
+          <div className="text-center">
+            <Link to="/start" className="btn btn-cta-2 pad-10">Start Today</Link>
+          </div>
+        </div>
+        <Footer />
       </div>
     );
   }
 }
 
-About.PropTypes = propTypes;
-About.defaultProps = defaultProps;
+Process.PropTypes = propTypes;
+Process.defaultProps = defaultProps;
 
-export default About;
+export default Process;

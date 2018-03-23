@@ -9,15 +9,9 @@ function App({ children }) {
   return (
     <div className="container-fluid no-padding">
       <div className="App">
-        <div className="warpper">
-          <div className="spacing">
-            <div className="row no-margin">
-              <main className="main-content col-xs-12 col-md">
-                {children}
-              </main>
-            </div>
-          </div>
-        </div>
+        <main className="main-content">
+          {children}
+        </main>
       </div>
     </div>
   );

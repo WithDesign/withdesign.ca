@@ -122,116 +122,85 @@ class BidForm extends Component {
 
   render() {
     return (
-      <form className="bid-input-wrapper pad-30-bottom" action="https://formspree.io/withdesignagency@gmail.com"
-      method="POST" id="formContact">
-        <label className="bid-input-label" htmlFor="name">What is your name? *</label>
-        <input
-          className="bid-input"
-          type="text"
-          value={this.state.name}
-          onChange={this.handleChangeName}
-          name="name"
-          placeholder="Enter your name."
-          required
-        />
-        <label className="bid-input-label" htmlFor="email">What is your email address? *</label>
-        <input
-          className="bid-input"
-          type="email"
-          name="email"
-          placeholder="Enter your email."
-          value={this.state.email}
-          onChange={this.handleChange}
-          required
-        />
-        <label className="bid-input-label" htmlFor="BizName">What's the name your business?</label>
-        <input
-          className="bid-input"
-          type="text"
-          value={this.state.bizName}
-          onChange={this.handleChangeBiz}
-          name="BizName"
-          placeholder="Enter your business name."
-        />
-        <label className="bid-input-label" htmlFor="description">Tell us about your business and the type of the project(s)? The more details you can share, the better.</label>
-        <textarea
-          className="bid-input"
-          name="description"
-          placeholder="The more info the better."
-          rows="12"
-          cols="50"
-          value={this.state.message}
-          onChange={this.handleChangeMsg}
-        />
-        <label className="bid-input-label" htmlFor="bid">What package are you intrested in? *</label>
-        {/* <p>The average bid other entrepreneurs have made are between <strong>$550 - $650</strong>, some much lower, others much higher. <strong>Every logo gets the highest quality craftsmanship</strong>. We work on the <strong>highest bidders first</strong> So higher bid, faster turnaround.</p> */}
-        <div className="pack-wrapper">
-          <input
-            className="bid-input"
-            type="checkbox"
-            name="pack1"
-            value={this.state.pack1}
-            onChange={this.handleChangePack1}
-          />
-          <label htmlFor="pack1">
-            UI Idea - $1498.00USD per month.
-            <div className="weight-400 mar-10-top">
-              <span>We also accept LTC, ETH, & DOGE</span>
-            </div>
-            <ul>
-              <li><i className="fa fa-check" aria-hidden="true" /> Unlimited Revisions</li>
-              <li><i className="fa fa-check" aria-hidden="true" />  Less than 4 Business Day Turnaround*</li>
-              <li><i className="fa fa-check" aria-hidden="true" /> After 2 Months, Cancel Anytime</li>
-            </ul>
-          </label>
+      <div>
+        <div className="page-intro brief-header">
+          <h3 className="weight-400 text-upper mar-10-bottom no-mar-top">
+            Send us a message on how we can help!
+          </h3>
+          <p className="sub-text weight-300">
+            Start working with us today to unlock your brands hidden
+            potential.<br />
+            <br />
+            <span className="weight-600">Fill out the form below!</span>
+            <br />{' '}
+            <small>
+              Have Questions? <br />
+              <a
+                className="link text-white"
+                href="mailto:withdesignagency@gmail.com"
+              >
+                Contact us
+              </a>
+            </small>
+          </p>
         </div>
-        <div className="pack-wrapper">
-          <input
-            className="bid-input"
-            type="checkbox"
-            name="pack2"
-            value={this.state.pack2}
-            onChange={this.handleChangePack2}
-          />
-          <label htmlFor="pack2">
-            Startup Essentials - $2498.00USD per month.
-            <div className="weight-400 mar-10-top">
-              <span>We also accept LTC, ETH, & DOGE</span>
-            </div>
-            <ul>
-              <li><i className="fa fa-check" aria-hidden="true" /> Unlimited Revisions</li>
-              <li><i className="fa fa-check" aria-hidden="true" /> Less than 3 Business Day Turnaround*</li>
-              <li><i className="fa fa-check" aria-hidden="true" /> Get custom Branding<div className="pad-20-left weight-300"><small> Includes a free logo, business cards, letterhead templates and more.</small></div></li>
-              <li><i className="fa fa-check" aria-hidden="true" /> After 3 Months, Cancel Anytime</li>
-            </ul>
-          </label>
+        <div className="pad-20 form">
+          <form
+            className="bid-input-wrapper pad-30-bottom" action="https://formspree.io/withdesignagency@gmail.com"
+            method="POST" id="formContact"
+          >
+            <label className="bid-input-label" htmlFor="name">What is your name? *</label>
+            <input
+              className="bid-input"
+              type="text"
+              value={this.state.name}
+              onChange={this.handleChangeName}
+              name="name"
+              placeholder="Enter your name."
+              required
+            />
+            <label className="bid-input-label" htmlFor="email">What is your email address? *</label>
+            <input
+              className="bid-input"
+              type="email"
+              name="email"
+              placeholder="Enter your email."
+              value={this.state.email}
+              onChange={this.handleChange}
+              required
+            />
+            <label className="bid-input-label" htmlFor="BizName">What's the name your business?</label>
+            <input
+              className="bid-input"
+              type="text"
+              value={this.state.bizName}
+              onChange={this.handleChangeBiz}
+              name="BizName"
+              placeholder="Enter your business name."
+            />
+            <label className="bid-input-label" htmlFor="description">Tell us about your business and how can we help you? The more details you can share, the better.</label>
+            <textarea
+              className="bid-input"
+              name="description"
+              placeholder="The more info the better."
+              rows="8"
+              cols="50"
+              value={this.state.message}
+              onChange={this.handleChangeMsg}
+            />
+            <label className="bid-input-label" htmlFor="description">How many unique visitors a month do you achieve?</label>
+            <input
+              className="bid-input"
+              type="number"
+              name="visitors"
+              placeholder="Enter the number of unique visitors."
+            />
+            <br />
+            <input className="clear-button btn btn-submit mar-30-top text-white" type="submit" value="Send" />
+            <p>Once submitted, please allow up to 24 hours for a responce. Thanks!</p>
+          </form>
         </div>
-        <div className="pack-wrapper">
-          <input
-            className="bid-input"
-            type="checkbox"
-            name="pack3"
-            value={this.state.pack3}
-            onChange={this.handleChangePack3}
-          />
-          <label htmlFor="pack3">
-            The Full Deal - $4998.00USD per month.
-            <div className="weight-400 mar-10-top">
-              <span>We also accept LTC, ETH, & DOGE</span>
-            </div>
-            <ul>
-              <li><i className="fa fa-check" aria-hidden="true" /> Unlimited Revisions</li>
-              <li><i className="fa fa-check" aria-hidden="true" /> Less than 2 Business Day Turnaround*</li>
-              <li><i className="fa fa-check" aria-hidden="true" /> Get custom branding<div className="pad-20-left weight-300"><small> Includes a free logo, business cards, letterhead templates and more.*</small></div></li>
-              <li><i className="fa fa-check" aria-hidden="true" /> Get any business materials<div className="pad-20-left weight-300"><small> Includes for example a Pitch Deck Design or Presentation Design and much more.*</small></div></li>
-              <li><i className="fa fa-check" aria-hidden="true" /> Ad Creative Design<div className="pad-20-left weight-300"><small> Creatives for platforms like Facebook and AdWords.*</small></div></li>
-              <li><i className="fa fa-check" aria-hidden="true" /> Cancel Anytime</li>
-            </ul>
-          </label>
-        </div>
-        <input className="clear-button btn btn-submit mar-30-top text-white" type="submit" value="Send Brief!" />
-        <p>Once submitted, please allow up to 24 hours for a responce. Thanks!</p>
-      </form>
+      </div>
     );
   }
 }

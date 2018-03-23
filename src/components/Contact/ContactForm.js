@@ -71,9 +71,10 @@ class ContactForm extends Component {
         <div className="filter">
           <form className="form" onSubmit={this._handleSubmit} id="formContact">
             <div className="input-wrapper">
-              <label htmlFor="formEmail">Email</label>
+              <label className="bid-input-label" htmlFor="formEmail">Email</label>
               <input
                 id="formEmail"
+                class="bid-input"
                 type="email"
                 name="formEmail"
                 value={this.state.contactEmail}
@@ -82,9 +83,10 @@ class ContactForm extends Component {
               />
             </div>
             <div className="input-wrapper">
-              <label htmlFor="formMsg">Message</label>
+              <label className="bid-input-label" htmlFor="formMsg">Message</label>
               <textarea
                 id="formMsg"
+                className="bid-input"
                 name="formMsg"
                 rows="8"
                 cols="40"
@@ -93,8 +95,11 @@ class ContactForm extends Component {
                 required
               />
             </div>
+            <br />
             <small>Please Note: It may take a up to two days to recieve a reply.</small>
+            <br /><br />
             <input className="btn-submit" type="submit" value="Submit" id="btn-submit" />
+            <br />
           </form>
         </div>
       </div>

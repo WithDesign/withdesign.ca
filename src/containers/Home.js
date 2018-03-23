@@ -1,20 +1,18 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import PageHead from "../components/Head";
-import Header from "../components/Header";
-import Toggle from "../components/Toggle";
-import Iphone from "../components/Iphone";
-import Bid from "../components/Bid";
-import { Carousel } from "react-responsive-carousel";
-import styles from "react-responsive-carousel/lib/styles/carousel.min.css";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import PageHead from '../components/Head';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+// import Bid from '../components/Bid';
+import { Link } from 'react-router';
 // import SubscribeFrom from 'react-mailchimp-subscribe';
 
 const propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 const defaultProps = {
-  className: ""
+  className: '',
 };
 
 class Home extends Component {
@@ -33,21 +31,21 @@ class Home extends Component {
 
     const { isShow } = this.state;
 
-    const isMobile = window.innerWidth <= 500;
-    const isTab = window.innerWidth <= 992;
+    // const isMobile = window.innerWidth <= 500;
+    // const isTab = window.innerWidth <= 992;
 
     return (
       <main className={className}>
         <PageHead
-          title={`With Design | `}
-          description={``}
+          title={'With Design | '}
+          description={''}
           url="https://withdesign.ca/"
         />
         <Header />
         <div
-          className={`container-fluid no-pad ${isShow
-            ? "breif-modal-active"
-            : ""}`}
+          className={`container-fluid no-pad home ${isShow
+            ? 'breif-modal-active'
+            : ''}`}
         >
           <div className="banner pos-rel">
             <div className="wrapper text-center">
@@ -60,13 +58,15 @@ class Home extends Component {
                 Optimize<a href="#3">3</a> <br />your brands hidden potential.
               </h1>
               <h2 className="mar-15-top mar-20-bottom weight-400 text-center">
-                Increase your conversion rate & revenue by partnering with one
-                of the leading optimization & design marketers in the Direct
-                Responce & eCommerce industry.
+                Increase your conversion rate, revenue & achieve your goals by partnering with one
+                of the leading optimization & design marketers in the industry.
               </h2>
-              <button className="btn" onClick={this.handleClick}>
-                Unlock My Brands Potential Today!
-              </button>
+              <Link
+                className="btn btn-banner"
+                to="/start"
+              >
+                Unlock Your Brands Potential Today!
+              </Link>
               <div className="text-black icon">
                 <i className="fa fa-angle-down" aria-hidden="true" />
               </div>
@@ -74,7 +74,7 @@ class Home extends Component {
           </div>
           <div className="content-wrapper clearfix">
             <div className="container pad-60-bottom">
-              <div className="row process-intro text-info">
+              <div className="row no-margin process-intro text-info">
                 <div id="1" className="col-xs-12 col-sm-4">
                   <h2>
                     <img
@@ -122,6 +122,9 @@ class Home extends Component {
                   </p>
                 </div>
               </div>
+              <p className="text-center">
+                <a href="/process/">Learn More <i className="fa fa-chevron-right" aria-hidden="true" /></a>
+              </p>
             </div>
             <div className="who-for container">
               <h2>Who is this service for?</h2>
@@ -138,22 +141,22 @@ class Home extends Component {
             </div>
             <div className="expertise">
               <div className="text-container container">
-                <div className="row">
+                <div className="row no-margin">
                   <div className="col-xs-12 col-sm-4">
-                    <h2>Our Expertise</h2>
+                    <h2>Our Solutions</h2>
                     <p>
                       We have a wide range of skills specilized towards increase your
                       sales & revenue for any of your ecomm projects.
                     </p>
-                    <button
-                      className="btn btn-cta-1 pad-15 mar-15-top text-center"
-                      onClick={this.handleClick}
+                    <Link
+                      className="btn btn-cta-1 pad-15 mar-15-top mar-15-bottom text-center"
+                      to="/start"
                     >
-                      Submit A Brief Today!
-                    </button>
+                      Start Today!
+                    </Link>
                   </div>
                   <div className="col-xs-12 col-sm-8">
-                    <div className="row">
+                    <div className="row no-margin">
                       <div className="col-xs-6 no-pad">
                         {/* <img className="img-responsive" src="./img/concept.svg" alt="" /> */}
                         <h4 className="mar-15-bottom weight-400">
@@ -199,7 +202,7 @@ class Home extends Component {
                 </div>
               </div>
               <div className="container cases">
-                <div className="row">
+                <div className="row no-margin">
                   <div className="col-xs-12 col-sm-4 sidebar">
                     <aside>
                       <h2>Our Cases</h2>
@@ -213,9 +216,9 @@ class Home extends Component {
                     <div className="partner-single case">
                       <a className="" rel="noopener noreferrer" target="_blank" href="https://logoswithdesign.com">
                         <img
-                          className="img-responsive mar-30-top"
-                          src="./img/handoff.svg"
-                          alt=""
+                          className="img-responsive"
+                          src="./img/interfacewithdesign.png"
+                          alt="Logo Example"
                         />  Title here
                       </a>
                       <p>
@@ -228,11 +231,11 @@ class Home extends Component {
                     </div>
                     <div className="partner-single case">
                       <a className="" rel="noopener noreferrer" target="_blank" href="https://logoswithdesign.com">
-                      <img
-                        className="img-responsive mar-30-top"
-                        src="./img/handoff.svg"
-                        alt=""
-                      />  Title here
+                        <img
+                          className="img-responsive"
+                          src="./img/interfacewithdesign.png"
+                          alt="Logo Example"
+                        />  Title here
                       </a>
                       <p>
                         We'll help you produce clean, professional and world class
@@ -274,7 +277,12 @@ class Home extends Component {
               </div>
               <div className="text-center mar-20-top pad-20-top">
                 <hr />
-                <button className="btn btn-cta-1 mar-10-top mar-10-bottom" onClick={this.handleClick}>Increase Your Revenue Like Many Others Today!</button>
+                <Link
+                  className="btn btn-cta-1 mar-10-top mar-10-bottom"
+                  to="/start"
+                >
+                  Increase Your Revenue Like Many Others Today!
+                </Link>
                 <hr />
               </div>
             </div>
@@ -329,12 +337,12 @@ class Home extends Component {
               </div>
             </div> */}
             <div className="partner-wrapper container">
-              <h2>Our Partners</h2>
+              <h2>Our Brand Partners</h2>
               <p>
                 We partner with the best & the brightest designers & marketers
                 to meet your every expectations.
               </p>
-              <div className="row">
+              <div className="row no-margin">
                 <div className="col-xs-12 col-md-6">
                   <div className="partner-single logos">
                     <a className="link" rel="noopener noreferrer" target="_blank" href="https://logoswithdesign.com">
@@ -381,7 +389,7 @@ class Home extends Component {
                 <a href="#">Link to case.</a>
               </div>
             </div> */}
-            <h6 className="weight-600 text-center">
+            <h6 className="weight-600 text-center pad-15 no-mar-bottom">
               <img
                 className="img-resonsive icon-image"
                 src="./img/money-back.svg"
@@ -392,67 +400,17 @@ class Home extends Component {
                 days in? We'll give you a full refund.
               </small>
             </h6>
-            <div className="text-center">
-              <button
+            <div className="text-center mar-30-bottom">
+              <Link
                 className="btn btn-cta-2 pad-10"
-                onClick={this.handleClick}
+                to="/start"
               >
                 Submit A Brief!
-              </button>
+              </Link>
             </div>
           </div>
         </div>
-        <footer>
-          <p className="text-center">
-            <small>
-              <a className="text-white" href="/policy">
-                Policies
-              </a>
-            </small>{" "}
-            |{" "}
-            <small>
-              <a className="text-white" href="mailto:hello@withdesign.ca">
-                Contact us
-              </a>
-            </small>
-          </p>
-          <h6 className="text-center text-white mar-30-bottom mar-30-top weight-300 text-primary">
-            <small>With Design | A digital agency.</small>
-          </h6>
-        </footer>
-        {isShow && (
-          <div className="brief-modal">
-            <div className="wrapper">
-              <button className="close-btn" onClick={this.handleClick}>
-                <i className="fa fa-close" />
-              </button>
-              <div className="brief-header">
-                <h3 className="weight-400 text-upper mar-10-bottom no-mar-top">
-                  Submit A Brief
-                </h3>
-                <p className="sub-text weight-300">
-                  Start working with us today to unlock your brands hidden
-                  potential.<br />
-                  <br />
-                  <span className="weight-600">Submit a brief today!</span>
-                  <br />{" "}
-                  <small>
-                    Have Questions? <br />
-                    <a
-                      className="link text-white"
-                      href="mailto:withdesignagency@gmail.com"
-                    >
-                      Contact us
-                    </a>
-                  </small>
-                </p>
-              </div>
-              <div className="pad-20">
-                <Bid />
-              </div>
-            </div>
-          </div>
-        )}
+        <Footer />
       </main>
     );
   }

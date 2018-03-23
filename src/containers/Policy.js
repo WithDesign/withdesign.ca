@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PageHead from '../components/Head';
+import PageSetup from '../components/PageSetup';
 
 const propTypes = {
   className: PropTypes.string,
@@ -8,18 +8,18 @@ const propTypes = {
 
 function Policy({ className }) {
   return (
-    <div className={`modal ${className}`}>
-      <PageHead
-        title={`Professional made, unlimited revision logo & brand development agency | Logos With Design`}
-        description={`With Design is a unlimited revision logo & brand development agency offering high quality, flexible low cost pricing, brand & logo development services.`}
-        url="https://interfacewithdesign.com/professional/"
-      />
-      <div className="container mar-30-top content-wrapper  pad-30-right pad-30-left pad-30-bottom mar-30-bottom">
-        <a className="mar-15 email btn btn-cta pull-left" href="mailto:hello@withdesign.ca"><i className="fa fa-envelope" /></a>
-        <a className="btn btn-cta mar-15 pull-right" href="/">Back To Home</a>
+    <div className={`${className}`}>
+      <PageSetup
+        className="policy-wrapper"
+        title=""
+        description=""
+        url=""
+        h1="Policy & Terms"
+        sub="We partner with the best & the brightest designers & marketers
+        to meet your every expectations."
+      >
         <div className="iub_content legal_pp">
           <div className="iub_header">
-            <h1>Privacy Policy of <strong>interfacewithdesign</strong></h1>
             <p>This Application collects some Personal Data from its Users.</p>
           </div>
           <div className="one_line_col">
@@ -146,7 +146,7 @@ function Policy({ className }) {
             </div>
           </div>
         </div>
-      </div>
+      </PageSetup>
     </div>
   );
 }

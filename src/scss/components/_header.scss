@@ -1,0 +1,64 @@
+///
+// Header
+///
+
+.logo {
+  display: inline;
+}
+
+.nav-wrapper {
+  padding: 20px 25px 15px;
+  border-bottom: 4px solid darken(color(brand, secondary), 10%);
+  background-color: darken(color(brand, secondary), 5%);
+
+  img {
+    max-width: 200px;
+  }
+}
+
+nav {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  @include shadow(rd, 3);
+
+  .btn {
+    margin: 0 5px;
+    padding: 5px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: color(greyscale, white);
+    border: 2px solid darken(color(brand, secondary), 10%) {
+      radius: 8px;
+    };
+    font-weight: 700;
+
+    @include breakpoint(max-width breakpoint-value(lg)) {
+      padding: 10px;
+    }
+    @extend .transition;
+
+    &:hover {
+      background-color: darken(color(brand, secondary), 10%);
+    }
+
+    &:focus {
+      background-color: darken(color(brand, secondary), 15%);
+
+      @include transform(translateY(2px));
+    }
+  }
+
+  .cta {
+    color: darken(color(brand, secondary), 25%);
+    border: 2px solid lighten(color(brand, secondary), 10%) {
+      radius: 8px;
+    };
+    background-color: color(greyscale, white);
+
+    &:hover {
+      color: darken(color(brand, secondary), 0%);
+      background: rgba(color(greyscale, white), 0.9);
+    }
+  }
+}
