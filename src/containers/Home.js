@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import PageHead from '../components/Head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-// import Bid from '../components/Bid';
 import { Link } from 'react-router';
-// import SubscribeFrom from 'react-mailchimp-subscribe';
 
 const propTypes = {
   className: PropTypes.string,
@@ -18,18 +16,23 @@ const defaultProps = {
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.state = { isShow: false };
+    this.state = { activeModal: 'clear' };
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
-    this.setState({ isShow: !this.state.isShow });
+  componentDidMount() {
+    window.scrollTo(0, 0);
   }
 
+  handleClick(modal) {
+    this.setState({
+      activeModal: modal,
+    });
+  }
   render() {
     const { className } = this.props;
 
-    const { isShow } = this.state;
+    const { isShow, isShow1, activeModal } = this.state;
 
     // const isMobile = window.innerWidth <= 500;
     // const isTab = window.innerWidth <= 992;
@@ -43,7 +46,7 @@ class Home extends Component {
         />
         <Header />
         <div
-          className={`container-fluid no-pad home ${isShow
+          className={`container-fluid no-pad home ${(activeModal !== 'clear')
             ? 'breif-modal-active'
             : ''}`}
         >
@@ -52,6 +55,7 @@ class Home extends Component {
               <img
                 className="img-responsive banner-bottom"
                 src="./img/banner-convert.svg"
+                alt="Increase your conversion rate, revenue & achieve your goals"
               />
               <h1 className="mar-10-bottom mar-30-top weight-400 text-center main-heading">
                 Strategize<a href="#1">1</a>, Develop<a href="#2">2</a>, and
@@ -123,7 +127,7 @@ class Home extends Component {
                 </div>
               </div>
               <p className="text-center">
-                <a href="/process/">Learn More <i className="fa fa-chevron-right" aria-hidden="true" /></a>
+                <Link to="/solutions">Learn More <i className="fa fa-chevron-right" aria-hidden="true" /></Link>
               </p>
             </div>
             <div className="who-for container">
@@ -227,7 +231,7 @@ class Home extends Component {
                         time on freelance job boards and get world class work done
                         insanely fast. We'll take great care of all your mobile & web
                         UI design projects.
-                      </p><a className="link" rel="noopener noreferrer" target="_blank" href="https://logoswithdesign.com">View 'Name Here' Case</a>
+                      </p><button className="link" onClick={() => this.handleClick('modal-1')}>View 'Name Here' Case</button>
                     </div>
                     <div className="partner-single case">
                       <a className="" rel="noopener noreferrer" target="_blank" href="https://logoswithdesign.com">
@@ -243,7 +247,7 @@ class Home extends Component {
                         time on freelance job boards and get world class work done
                         insanely fast. We'll take great care of all your mobile & web
                         UI design projects.
-                      </p><a className="link" rel="noopener noreferrer" target="_blank" href="https://logoswithdesign.com">View 'Name Here' Case</a>
+                      </p><button className="link" onClick={() => this.handleClick('modal-2')}>View 'Name Here' Case</button>
                     </div>
                     {/* <a className="" rel="noopener noreferrer" target="_blank" href="https://logoswithdesign.com">
                       View More Cases
@@ -288,6 +292,7 @@ class Home extends Component {
             </div>
             {/* <div className="">
               <div className="client-brands">
+                <h5 className="text-center weight-300 no-margin">TRUSTED BY THE WORLD'S SMARTEST COMPANIES</h5>
                 <div className="logo-wrapper pad-30-top pad-10-bottom">
                   <div>
                     <img
@@ -325,14 +330,6 @@ class Home extends Component {
                       alt="Logo Example"
                     />
                   </div>
-                </div>
-                <div className="text-center cta-bar">
-                  <button
-                    className="btn pad-15 mar-15-top text-center"
-                    onClick={this.handleClick}
-                  >
-                    Increase Your Revenue Like Many Others Today!
-                  </button>
                 </div>
               </div>
             </div> */}
@@ -411,6 +408,33 @@ class Home extends Component {
           </div>
         </div>
         <Footer />
+        {(activeModal !== 'clear' || activeModal === '') && (
+        <div className="brief-modal">
+          <div className="wrapper">
+            <button className="close-btn" onClick={() => this.handleClick('clear')}>
+              <i className="fa fa-close" />
+            </button>
+            {(activeModal === 'modal-1') &&
+            <div>
+              <div className="brief-header">
+                <h3 className="weight-400 text-upper mar-10-bottom no-mar-top">
+                  show
+                </h3>
+              </div>
+              <div className="pad-20" />
+            </div>}
+            {(activeModal === 'modal-2') &&
+            <div>
+              <div className="brief-header">
+                <h3 className="weight-400 text-upper mar-10-bottom no-mar-top">
+                  1
+                </h3>
+              </div>
+              <div className="pad-20" />
+            </div>}
+          </div>
+        </div>
+        )}
       </main>
     );
   }

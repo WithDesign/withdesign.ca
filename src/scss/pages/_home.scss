@@ -262,9 +262,9 @@ img.funnel {
 // Home Client Brand Logo Bar
 
 .client-brands {
-  padding: 20px 0;
+  padding: 40px 0;
   margin-bottom: 50px;
-  background-color: #e6eaec;
+  background-color: rgba(color(brand, secondary), 0.2);
 
   .logo-wrapper {
     @extend .container;

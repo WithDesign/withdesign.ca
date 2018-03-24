@@ -27,6 +27,7 @@
 
       & + h6 {
         margin-top: 15px;
+        margin-bottom: 15px;
         color: color(brand, secondary);
       }
     }
@@ -69,6 +70,10 @@
   padding: 0 25px;
   margin: 0 auto;
   box-sizing: border-box;
+
+  // @include breakpoint(md) {
+  //   border-left: 4px solid darken(color(brand, primary), 10%);
+  // }
 
   .bid-input-label,
   .bid-input {

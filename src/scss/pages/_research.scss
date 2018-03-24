@@ -6,8 +6,11 @@
   .banner {
     position: relative;
     display: block;
+    min-height: 650px;
 
     .wrapper {
+      padding-top: 100px;
+
       @include breakpoint(md) {
         padding-top: 50px;
       }
@@ -97,31 +100,62 @@
     .dev {
       right: 35%;
       bottom: 45px;
+
+      @include breakpoint(max-width breakpoint-value(md)) {
+        top: 45px;
+        bottom: initial;
+      }
     }
 
     .seo {
       bottom: 100px;
       left: 20%;
+
+      @include breakpoint(max-width breakpoint-value(md)) {
+        top: 100px;
+        bottom: initial;
+      }
     }
 
     .world {
       right: 5%;
       bottom: 250px;
+
+      @include breakpoint(max-width breakpoint-value(md)) {
+        top: 10px;
+        bottom: initial;
+      }
     }
 
     .pencils {
       bottom: 250px;
       left: 5%;
+
+      @include breakpoint(max-width breakpoint-value(md)) {
+        top: 120px;
+        bottom: initial;
+        left: 10px;
+      }
     }
 
     .mega {
       bottom: 15px;
       left: 2%;
+
+      @include breakpoint(max-width breakpoint-value(md)) {
+        top: 15px;
+        bottom: initial;
+      }
     }
 
     .analyze {
       right: 15%;
       bottom: 100px;
+
+      @include breakpoint(max-width breakpoint-value(md)) {
+        top: 100px;
+        bottom: initial;
+      }
     }
   }
 }
@@ -138,10 +172,10 @@
   }
 
   a {
-    margin-top: 5px;
-    padding: 5px 15px;
     box-sizing: border-box;
     width: 100%;
+    margin-top: 5px;
+    padding: 5px 15px;
     text-decoration: none;
     text-transform: uppercase;
     color: color(brand, secondary);
@@ -158,7 +192,7 @@
 .updates,
 .research {
   article {
-    border-bottom: 4px solid color(brand, secondary);
+    //border-bottom: 4px solid color(brand, secondary);
     margin-bottom: 30px;
     padding-bottom: 30px;
 
@@ -168,13 +202,13 @@
       justify-content: center;
       box-sizing: border-box;
       width: 100%;
-      padding: 25px;
       min-height: 200px;
       max-height: 400px;
       margin-bottom: 25px;
+      padding: 25px;
+      text-align: center;
       border-radius: 8px;
       background-color: rgba(color(brand, secondary), 0.1);
-      text-align: center;
 
       h4 {
         color: color(brand, info);
@@ -184,11 +218,13 @@
     .date {
       margin-bottom: 10px;
       font-weight: 600;
+
       @include font-size(10px);
     }
 
     .author {
       font-weight: 400;
+
       @include font-size(12px);
       img {
         max-width: 25px;

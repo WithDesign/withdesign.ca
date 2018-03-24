@@ -1,12 +1,12 @@
 @include normalize();
 
 ::-moz-selection {
-   color: color(greyscale, dark-grey);
-  background: rgba(color(greyscale, grey), 0.8);
+  color: color(brand, primary);
+  background: rgba(color(brand, primary), 0.2);
 }
 ::selection {
-  color: color(greyscale, dark-grey);
-  background: rgba(color(greyscale, grey), 0.8);
+  color: color(brand, info);
+  background: rgba(color(brand, info), 0.2);
 }
 
 .App {

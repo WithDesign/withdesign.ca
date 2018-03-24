@@ -15,6 +15,10 @@ const defaultProps = {
 };
 
 class Research extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     const {
       className,
@@ -138,13 +142,52 @@ class Research extends Component {
                 </div>
                 <div className="research pad-30-bottom">
                   <h2 id="research">Research</h2>
-                  <h5>Comming Soon!</h5>
+                  <article className="no-mar-bottom no-pad-bottom">
+                    <div className="article-banner">
+                      <h4>UX Optimization Guide<br /><small className="weight-300 h6 no-margin">https://uxoptimizationguide.com/</small><br /><span className="weight-600 h6 no-margin">Comming Soon....</span></h4>
+                    </div>
+                  </article>
                 </div>
                 <div className="updates">
                   <h2 id="updates">Updates</h2>
                   <article className="update withdesign-release">
                     <div className="article-banner">
                       <h4>Withdesign.ca Site Release</h4>
+                    </div>
+                    <div className="row no-margin">
+                      <div className="col-xs-12 col-md-3">
+                        <div className="date">12/12/18</div>
+                        <div className="author">
+                          <img className="img/responsive" src="./img/wd.svg" alt="author" />Cody | Design Manager</div>
+                      </div>
+                      <div className="col-xs-12 col-md-9 content">
+                        <p>
+                          We'll help you produce clean, professional and world class
+                          looking products without the hassle. Stop wasting precious
+                          time on freelance job boards and get world class work done
+                          insanely fast. We'll take great care of all your mobile & web
+                          UI design projects.
+                        </p>
+                        <p>
+                          We'll help you produce clean, professional and world class
+                          looking products without the hassle. Stop wasting precious
+                          time on freelance job boards and get world class work done
+                          insanely fast. We'll take great care of all your mobile & web
+                          UI design projects.
+                        </p>
+                        <p>
+                          We'll help you produce clean, professional and world class
+                          looking products without the hassle. Stop wasting precious
+                          time on freelance job boards and get world class work done
+                          insanely fast. We'll take great care of all your mobile & web
+                          UI design projects.
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                  <article className="update withdesign-release">
+                    <div className="article-banner">
+                      <h4>Growing Our Solution Offerings</h4>
                     </div>
                     <div className="row no-margin">
                       <div className="col-xs-12 col-md-3">

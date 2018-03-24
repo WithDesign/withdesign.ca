@@ -158,6 +158,7 @@ class BidForm extends Component {
               name="name"
               placeholder="Enter your name."
               required
+              autoFocus
             />
             <label className="bid-input-label" htmlFor="email">What is your email address? *</label>
             <input
@@ -183,7 +184,7 @@ class BidForm extends Component {
               className="bid-input"
               name="description"
               placeholder="The more info the better."
-              rows="8"
+              rows="5"
               cols="50"
               value={this.state.message}
               onChange={this.handleChangeMsg}

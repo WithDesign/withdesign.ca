@@ -11,10 +11,66 @@
   border-bottom: 4px solid darken(color(brand, secondary), 10%);
   background-color: darken(color(brand, secondary), 5%);
 
+  @extend .transition;
+
+  @include breakpoint(max-width breakpoint-value(md)) {
+    padding: 10px 15px 10px;
+  }
+
   img {
     max-width: 200px;
+    @include breakpoint(max-width breakpoint-value(md)) {
+      padding-top: 5px;
+    }
   }
 }
+
+.mobile-nav {
+  @extend .transition;
+}
+@include create-keyframe(fadeInDown);
+@include create-keyframe(fadeOutUp);
+.mobile-nav-show {
+  display: block;
+  box-sizing: border-box;
+  animation: 0.2s fadeInDown forwards;
+
+  a {
+    display: block;
+    @include calc(width, 90%, '100% - 45px');
+    margin: 10px !important;
+
+  }
+  background-color: color(brand, secondary);
+}
+
+.mobile-nav-hidden {
+  @include breakpoint(max-width breakpoint-value(md)) {
+    animation: 0.2s fadeOutUp forwards;
+    display: none;
+  }
+}
+
+.mobile-nav-toggle {
+  float: right;
+  background-color: color(brand, secondary);
+  color: color(greyscale, white);
+  border: 2px solid color(greyecale, white) {
+    radius: 4px;
+  };
+  padding: 7px 10px;
+
+  i {
+    &:before {
+      line-height: 0;
+    }
+  }
+
+  @include breakpoint(max-width breakpoint-value(md)) {
+
+  }
+}
+
 
 nav {
   border-top-left-radius: 10px;

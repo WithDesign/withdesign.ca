@@ -34,7 +34,7 @@ textarea:invalid {
     display: block;
     font-weight: 400;
 
-    @include font-size(24px);
+    //@include font-size(24px);
     @extend .text-upper,
     .mar-10-bottom;
   }
@@ -44,9 +44,9 @@ textarea:invalid {
     color: color(brand, info);
     font-weight: 400;
     line-height: 1.4;
-    margin: 15px 0 10px;
+    margin: 15px 0 5px;
 
-    @include font-size(18px);
+    @include font-size(16px);
   }
 
   .bid-input,
@@ -58,14 +58,17 @@ textarea:invalid {
     border: 1px solid rgba(color(brand, info), 0.5) {
       radius: 4px;
     };
+    @include font-size(14px);
 
     @extend .clear-button,
     .transition;
 
     &:focus {
-      border: 1px solid color(brand, info) {
+      border: 1px solid color(brand, primary) {
         radius: 4px;
       }
+      background-color: rgba(color(brand, primary), 0.03);
+      @include box-shadow(4px 0px 15px rgba(color(brand, primary), 0.3));
     }
   }
 
