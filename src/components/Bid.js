@@ -170,16 +170,40 @@ class BidForm extends Component {
               onChange={this.handleChange}
               required
             />
-            <label className="bid-input-label" htmlFor="BizName">What's the name your business?</label>
+            <label className="bid-input-label" htmlFor="date">Choose a preferred date & time a chat?</label>
             <input
+              className="bid-input"
+              type="date"
+              name="date"
+              value={this.state.bizName}
+              onChange={this.handleChangeBiz}
+            />
+            <br />
+            <select
+              className="bid-input pad-10"
+              type="time"
+              name="appt-time"
+              value={this.state.message}
+              onChange={this.handleChangeMsg}
+            >
+              <option value="">7:00-10:00am PST</option>
+              <option value="">10:00am-12:00pm PST</option>
+              <option value="">12:00-2:00pm PST</option>
+              <option value="">2:00-6:00pm PST</option>
+            </select>
+            <br />
+            <input className="clear-button btn btn-submit mar-30-top text-white" type="submit" value="Send" />
+            <p>Once submitted, please allow up to 24 hours for a responce. Thanks!</p>
+            {/* <label className="bid-input-label" htmlFor="BizName">What's the name your business?</label> */}
+            {/* <input
               className="bid-input"
               type="text"
               value={this.state.bizName}
               onChange={this.handleChangeBiz}
               name="BizName"
               placeholder="Enter your business name."
-            />
-            <label className="bid-input-label" htmlFor="description">Tell us about your business and how can we help you? The more details you can share, the better.</label>
+            /> */}
+            {/* <label className="bid-input-label" htmlFor="description">Tell us about your business and how can we help you? The more details you can share, the better.</label>
             <textarea
               className="bid-input"
               name="description"
@@ -196,9 +220,7 @@ class BidForm extends Component {
               name="visitors"
               placeholder="Enter the number of unique visitors."
             />
-            <br />
-            <input className="clear-button btn btn-submit mar-30-top text-white" type="submit" value="Send" />
-            <p>Once submitted, please allow up to 24 hours for a responce. Thanks!</p>
+            <br /> */}
           </form>
         </div>
       </div>

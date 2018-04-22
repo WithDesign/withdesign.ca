@@ -29,8 +29,8 @@ class GetStarted extends Component {
           sub=""
           container={false}
         >
-          <div className="row no-margin pos-rel">
-            <div className="col-xs-12 col-md-8 no-pad pos-rel start-value-prop">
+          <div className="row middle-md no-margin pos-rel">
+            <div className="col-xs-12 col-md-6 no-pad pos-rel start-value-prop">
               <div className="started-content text-center">
                 <img className="img-responsive mega-image" src="./img/mega.svg" alt="Get Started" />
                 <img className="img-responsive mega-image" src="./img/mega.svg" alt="Get Started" />
@@ -82,7 +82,7 @@ class GetStarted extends Component {
                 </div>
               </div>
             </div>
-            <div className="col-xs-12 col-md-4 no-pad">
+            <div className="col-xs-12 col-md-6 no-pad">
               <div className="started-form-wrapper">
                 <Bid />
               </div>

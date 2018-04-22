@@ -42,9 +42,14 @@
 .started-content {
   margin: 0 auto;
   max-width: 650px;
+  min-height: 625px;
   padding: 0 25px;
   box-sizing: border-box;
   position: relative;
+
+  @include breakpoint(max-width breakpoint-value(md)) {
+    min-height: 200px;
+  }
 }
 
 .start-value-prop {
