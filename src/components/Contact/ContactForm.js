@@ -69,29 +69,29 @@ class ContactForm extends Component {
     return (
       <div className="contact-form" id="contact">
         <div className="filter">
-          <form className="form" onSubmit={this._handleSubmit} id="formContact">
+          <form className="form" action="https://formspree.io/hello@withdesign.ca" method="POST" id="formContact">
             <div className="input-wrapper">
               <label className="bid-input-label" htmlFor="formEmail">Email</label>
               <input
                 id="formEmail"
-                class="bid-input"
+                className="bid-input"
                 type="email"
-                name="formEmail"
-                value={this.state.contactEmail}
-                onChange={this._handleChange}
+                name="contactEmail"
+                // value={this.state.contactEmail}
+                // onChange={this._handleChange}
                 required
               />
             </div>
             <div className="input-wrapper">
-              <label className="bid-input-label" htmlFor="formMsg">Message</label>
+              <label className="bid-input-label" htmlFor="contactMessage">Message</label>
               <textarea
                 id="formMsg"
                 className="bid-input"
-                name="formMsg"
+                name="contactMessage"
                 rows="8"
                 cols="40"
-                value={this.state.contactMessage}
-                onChange={this._handleChangeMsg}
+                // value={this.state.contactMessage}
+                // onChange={this._handleChangeMsg}
                 required
               />
             </div>

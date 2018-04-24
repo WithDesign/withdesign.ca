@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import PageHead from '../components/Head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Contact from '../components/Contact/ContactFormWrapper';
 import { Link } from 'react-router';
 
 const propTypes = {
@@ -40,8 +41,8 @@ class Home extends Component {
     return (
       <main className={className}>
         <PageHead
-          title={'With Design | '}
-          description={''}
+          title={'With Design | STRATEGIZE, DEVELOP, AND OPTIMIZE YOUR BRANDS HIDDEN POTENTIAL.'}
+          description={'A guaranteed of delivery of new marketing experiences and ideas with insights about your customers to dramatically improve your your conversion rate. '}
           url="https://withdesign.ca/"
         />
         <Header />
@@ -58,26 +59,26 @@ class Home extends Component {
                 alt="Increase your conversion rate, revenue & achieve your goals"
               />
               <h1 className="mar-10-bottom mar-30-top weight-400 text-center main-heading">
-                Strategize<a href="#1">1</a>, Develop<a href="#2">2</a>, and
-                Optimize<a href="#3">3</a> <br />your brands hidden potential.
+                Strategize, Develop, and
+                Optimize<br />your brands hidden potential.
               </h1>
               <h2 className="mar-15-top mar-20-bottom weight-400 text-center">
-                Increase your conversion rate, revenue & achieve your goals by partnering with one
+                Increase your conversion rate & achieve your goals by partnering with one
                 of the leading optimization & design marketers in the industry.
               </h2>
-              <Link
+              <a
                 className="btn btn-banner"
-                to="/start"
+                href="#contact"
               >
                 Unlock Your Brands Potential Today!
-              </Link>
-              <div className="text-black icon">
+              </a>
+              <a href="#contact" className="text-black icon">
                 <i className="fa fa-angle-down" aria-hidden="true" />
-              </div>
+              </a>
             </div>
           </div>
           <div className="content-wrapper clearfix">
-            <div className="container pad-60-bottom">
+            {/* <div className="container pad-60-bottom">
               <div className="row no-margin process-intro text-info">
                 <div id="1" className="col-xs-12 col-sm-4">
                   <h2>
@@ -129,7 +130,7 @@ class Home extends Component {
               <p className="text-center">
                 <Link to="/solutions">Learn More <i className="fa fa-chevron-right" aria-hidden="true" /></Link>
               </p>
-            </div>
+            </div> */}
             <div className="who-for container">
               <h2>Who is this service for?</h2>
               <img alt="money" className="img-responsive money sm" src="./img/money.png" />
@@ -138,8 +139,10 @@ class Home extends Component {
               <img alt="box" className="img-responsive box sm" src="./img/box.png" />
               <img alt="thumbs" className="img-responsive thumbs sm" src="./img/thumbs.png" />
               <p>
-                This service is for any ecomm & product buisness wanting to grow
-                there sales & revenue that fits prefectly within there brand. This service is for any ecomm & product buisness wanting to grow there sales & revenue that fits prefectly within there brand.
+                Any business or project looking for a guaranteed delivery of new marketing experiences and ideas with insights about your customers to dramatically improve your entire customer sales journey, all completed with design.
+<br /><br />
+                From working with some of the largest brands & clients in the direct response and ecommerce industry, we have built and fine tuned a process to always ensure success.The process was created through rigorous testing gained through our extensive experience and in depth knowledge of the psychology behind why people buy. All of our solutions will always conclude with finding and optimizing the hidden potential.
+
               </p>
               <img alt="device" className="img-responsive phone" src="./img/phone.png" />
             </div>
@@ -149,63 +152,63 @@ class Home extends Component {
                   <div className="col-xs-12 col-sm-4">
                     <h2>Our Solutions</h2>
                     <p>
-                      We have a wide range of skills specilized towards increase your
-                      sales & revenue for any of your ecomm projects.
+                      All of our services are specialized towards solving business your problems. We can always provide surprising insights into the hidden growth potential of your brand. Imagine all of your marketing experiences fully optimized.
                     </p>
-                    <Link
+                    <img
+                      className="img-responsive"
+                      src="./img/process-top.svg"
+                      alt="With Design Solutions"
+                    />
+                    {/* <Link
                       className="btn btn-cta-1 pad-15 mar-15-top mar-15-bottom text-center"
                       to="/start"
                     >
                       Start Today!
-                    </Link>
+                    </Link> */}
                   </div>
                   <div className="col-xs-12 col-sm-8">
                     <div className="row no-margin">
-                      <div className="col-xs-6 no-pad">
+                      <div className="col-xs-12 col-sm-6 no-pad">
                         {/* <img className="img-responsive" src="./img/concept.svg" alt="" /> */}
                         <h4 className="mar-15-bottom weight-400">
-                          Research & Strategy Development
+                          SEO, growth marketing, and development
                         </h4>
                         <span>
-                          Idea crteation, Competitor Analysis, User reasearch, &
-                          Keyword research just to start
+                          Full service <strong>design & ecommerce optimization</strong> on all of your customer experiences. We take care of <strong>everything from research, strategy, to design, analytics, and all the technical development.</strong>
                         </span>
                       </div>
-                      <div className="col-xs-6 no-pad">
+                      <div className="col-xs-12 col-sm-6 no-pad">
                         {/* <img className="img-responsive" src="./img/concept.svg" alt="" /> */}
                         <h4 className="mar-15-bottom weight-400">
-                          ROI centered UI & UX
+                          ROI centered website and mobile design
                         </h4>
                         <span>
-                          Brand & sales growth for any pf your ecomm stores,
-                          Product Funnel, and any of your other projects.
+                          With Design can take care of <strong>all of your print and digital designs needs</strong>.<strong> For example,</strong> this could include things like building a high level <strong>UI</strong> with a gorgeous <strong>UX</strong>, building a <strong>high converting sales funnel</strong> to then crafting the perfect <strong>product label</strong> and <strong>building the brand strategy.</strong>
                         </span>
                       </div>
-                      <div className="col-xs-6 no-pad">
+                      <div className="col-xs-12 col-sm-6 no-pad">
                         {/* <img className="img-responsive" src="./img/concept.svg" alt="" /> */}
                         <h4 className="mar-15-bottom weight-400">
-                          Testing & Optimzation
+                          A/B Testing & Optimization
                         </h4>
                         <span>
-                          Converstiion Optimization, A/B Testing, Site
-                          Performance Improvments, SEO & Keyword Optimization.
+                          We help you <strong>create and optimize your hypothesis.</strong> Each hypothesis will be highly tested through <strong>A/B testing</strong> and <strong>other user research methods</strong>. We get to <strong>know your user inside and out,</strong> getting into your customers' heads to find the <strong>best unique psychological triggers</strong> and <strong>value proposition insights for better predictions.</strong>
                         </span>
                       </div>
-                      <div className="col-xs-6 no-pad">
+                      <div className="col-xs-12 col-sm-6 no-pad">
                         {/* <img className="img-responsive" src="./img/concept.svg" alt="" /> */}
                         <h4 className="mar-15-bottom weight-400">
-                          Brand Analysis & development.
+                          Brand development & Personalization
                         </h4>
                         <span>
-                          Brand & sales growth eCommerce Stores, Product Funnel,
-                          & Direct Responce Sales Pages.
+                          Our brand experts will help you build a <strong>better brand & social following</strong> by testing and validating ideas with the <strong>top personalization methods</strong> relating to your business. They will handle <strong>all the design updates</strong> and <strong>provide actionable insights</strong> to achieve <strong>top positioning within your niche</strong> on platforms like <strong>Google, Facebook, and Instagram.</strong>
                         </span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="container cases">
+              {/* <div className="container cases">
                 <div className="row no-margin">
                   <div className="col-xs-12 col-sm-4 sidebar">
                     <aside>
@@ -249,12 +252,12 @@ class Home extends Component {
                         UI design projects.
                       </p><button className="link" onClick={() => this.handleClick('modal-2')}>View 'Name Here' Case</button>
                     </div>
-                    {/* <a className="" rel="noopener noreferrer" target="_blank" href="https://logoswithdesign.com">
+                     <a className="" rel="noopener noreferrer" target="_blank" href="https://logoswithdesign.com">
                       View More Cases
-                    </a> */}
+                    </a>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="client-wrapper container">
               <img
@@ -269,17 +272,12 @@ class Home extends Component {
               />
               <h3 className="text-inf text-center">What Our Clients Say.</h3>
               <p className="weight-300 text-center">
-                We'll help you produce clean, professional and world class
-                looking products without the hassle. Stop wasting precious time
-                on freelance job boards and get world class work done insanely
-                fast. We'll take great care of all your mobile & web UI design
-                projects.
+                The With Design team has been really impressive in terms of their level of knowledge and their sophisticated approach of design & optimization. They brought a high level of insights and design assistatce that we would not have had done ourselves.
               </p>
               <div className="text-center">
-                <img className="company-image" src="./img/logos/LogosWithDesign-2.svg" alt="Logo Example" />
-                <span>Name goes here - company</span>
+                <span>Rod - CryptoByte</span>
               </div>
-              <div className="text-center mar-20-top pad-20-top">
+              {/* <div className="text-center mar-20-top pad-20-top">
                 <hr />
                 <Link
                   className="btn btn-cta-1 mar-10-top mar-10-bottom"
@@ -288,7 +286,7 @@ class Home extends Component {
                   Increase Your Revenue Like Many Others Today!
                 </Link>
                 <hr />
-              </div>
+              </div> */}
             </div>
             {/* <div className="">
               <div className="client-brands">
@@ -333,7 +331,10 @@ class Home extends Component {
                 </div>
               </div>
             </div> */}
-            <div className="partner-wrapper container">
+            <div id="contact">
+              <Contact />
+            </div>
+            {/* <div className="partner-wrapper container">
               <h2>Our Brand Partners</h2>
               <p>
                 We partner with the best & the brightest designers & marketers
@@ -378,7 +379,7 @@ class Home extends Component {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* <div className="case-wrapper">
               <div className="case-single">
                 <h3>Logos With Design</h3>
@@ -386,7 +387,7 @@ class Home extends Component {
                 <a href="#">Link to case.</a>
               </div>
             </div> */}
-            <h6 className="weight-600 text-center pad-15 no-mar-bottom">
+            {/* <h6 className="weight-600 text-center pad-15 no-mar-bottom">
               <img
                 className="img-resonsive icon-image"
                 src="./img/money-back.svg"
@@ -404,7 +405,7 @@ class Home extends Component {
               >
                 Submit A Brief!
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
         <Footer />

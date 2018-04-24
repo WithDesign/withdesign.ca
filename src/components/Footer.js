@@ -10,16 +10,16 @@ function Footer() {
             <a className="" href="/">
               <img className="img-responsive" src="./img/logo-white.svg" alt="With Design Agency" />
             </a>
-            <Link className="btn" to="/start">Get Started</Link>
+            {/* <Link className="btn" to="/start">Get Started</Link> */}
           </div>
           <div className="col-xs-12 col-sm-9 business">
-            <h6>Business</h6>
-            <Link className="" to="/partners">Partners</Link>
+            {/* <h6>Business</h6> */}
+            {/* <Link className="" to="/partners">Partners</Link>
             <Link className="" to="/research">Research</Link>
             <Link className="" to="/about">About</Link>
             <Link className="" to="/solutions">Solutions</Link>
-            <Link className="" to="/contact">Contact</Link>
-            <Link className="pull-right" to="/contact"><i className="fa fa-envelope" /></Link>
+            <Link className="" to="/contact">Contact</Link> */}
+            <Link className="pull-right" to="/"><i className="fa fa-envelope" /></Link>
             <a className="pull-right" href="https://github.com/WithDesign" target="_blank" rel="noopener noreferrer"><i className="fa fa-github" /></a>
             <a className="pull-right" href="https://www.facebook.com/withdesigndigital/" target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook" /></a>
             <a className="pull-right" href="https://www.instagram.com/withdesigndigital/" target="_blank" rel="noopener noreferrer"><i className="fa fa-instagram" /></a>

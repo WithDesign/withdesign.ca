@@ -5,11 +5,11 @@
 .btn-banner {
   position: relative;
   padding: 15px 25px;
-  color: darken(color(brand, secondary), 40%);
+  color: #fff;
   border: { //4px solid darken(color(brand, success), 30%)
     radius: 4px;
   };
-  background: darken(color(brand, success), 0%);
+  background: #2470d3;
   font-weight: 600;
 
   @include shadow(rd, 3);
@@ -18,7 +18,7 @@
   @include font-size(18px);
 
   &:hover {
-    color: darken(color(brand, secondary), 80%) !important;
+    color: darken(#2470d3, 80%) !important;
 
     @include transform(translateY(2px));
   }

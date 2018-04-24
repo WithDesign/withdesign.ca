@@ -15,12 +15,12 @@ const routes = (
   <Route onUpdate={() => window.scrollTo(0, 0)} path="/" component={App}>
     <IndexRoute component={HomePage} />
     <Route path="policy" component={Policy} />
-    <Route path="contact" component={Contact} />
-    <Route path="solutions" component={Process} />
+    {/* <Route path="contact" component={Contact} /> */}
+    {/* <Route path="solutions" component={Process} /> */}
     <Route path="partners" component={Partners} />
-    <Route path="about" component={About} />
-    <Route path="research" component={Research} />
-    <Route path="start" component={GetStarted} />
+    {/* <Route path="about" component={About} />
+    <Route path="research" component={Research} /> */}
+    {/* <Route path="start" component={GetStarted} /> */}
     <Route path="404" component={Error404} />
     <Redirect from="*" to="/404" />
   </Route>

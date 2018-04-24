@@ -21,7 +21,7 @@
 %text-shadow {
   @include shadow((
     type: light,
-    level: 1,
+    level: 2,
     text: text,
   )...);
 }
@@ -147,8 +147,13 @@
     & + span {
       display: block;
       margin-bottom: 35px;
-      @include font-size(13px);
+      @include font-size(14px);
+      line-height: 1.65;
       color: color(brand, info);
+
+      strong {
+        @extend %text-shadow;
+      }
     }
   }
 }

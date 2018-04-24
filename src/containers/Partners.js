@@ -29,7 +29,7 @@ class Partners extends Component {
           to meet your every expectations."
         >
           <p className="text-center">
-            <a className="weight-600 text-upper" rel="noopener noreferrer" target="_blank" href="https://withdesign.ca/contact">Want to partner up on a project? Contact Us!</a>
+            <a className="weight-600 text-upper" rel="noopener noreferrer" target="_blank" href="https://withdesign.ca/">Want to partner up on a project? Contact Us!</a>
           </p>
           <div className="row no-margin">
             <div className="col-xs-12 col-md-6">
@@ -38,15 +38,11 @@ class Partners extends Component {
                   <img
                     className="img-responsive"
                     src="./img/logoswithdesign.png"
-                    alt="Logo Example"
+                    alt="Logos With Design"
                   />
                 </a>
                 <p>
-                    We'll help you produce clean, professional and world class
-                    looking products without the hassle. Stop wasting precious
-                    time on freelance job boards and get world class work done
-                    insanely fast. We'll take great care of all your mobile & web
-                    UI design projects.
+                  Download an free open source logo, or purchase a unique mark for your project, where you alone get the exclusive rights to use it. PROFESSIONAL MADE LOGOS & BRANDS. They will create the perfect logo for your business or project!
                   </p><a className="link" rel="noopener noreferrer" target="_blank" href="https://logoswithdesign.com">Go To Partner</a>
               </div>
             </div>
@@ -56,15 +52,11 @@ class Partners extends Component {
                   <img
                     className="img-responsive"
                     src="./img/interfacewithdesign.png"
-                    alt="Logo Example"
+                    alt="Interface With Design"
                   />
                 </a>
                 <p>
-                    We'll help you produce clean, professional and world class
-                    looking products without the hassle. Stop wasting precious
-                    time on freelance job boards and get world class work done
-                    insanely fast. We'll take great care of all your mobile & web
-                    UI design projects.
+                  Get a dedicated design team for a low, flat monthly cost. Who can turn your sketches and wireframes into beautiful UI concepts or production-ready UI designs with unlimited revisions & on-demand requests. They can also handle any branding needs you business may have.
                   </p>
                 <a className="link" rel="noopener noreferrer" target="_blank" href="https://interfacewithdesign.com">Go To Partner</a>
               </div>

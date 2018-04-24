@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import Header from '../Header';
 import ContactForm from './ContactForm';
-import Footer from '../Footer';
-import PageSetup from '../PageSetup';
 
 class ContactFormWrapper extends Component {
 
@@ -30,28 +27,15 @@ class ContactFormWrapper extends Component {
     // };
 
     return (
-      <div>
-        <PageSetup
-          className="contact-wrapper"
-          title="Contact Us"
-          description=""
-          url=""
-          h1="Contact Us"
-          sub="We partner with the best & the brightest designers & marketers
-          to meet your every expectations."
-        >
-          <div className="row">
-            <div className="col-xs-12 col-sm-8 ">
-              <div className="bid-input-wrapper">
-                <ContactForm />
-              </div>
-            </div>
-            <div className="col-xs-12 col-sm-4">
-              <p>We partner with the best & the brightest designers & marketers
-                  to meet your every expectations.</p>
+      <div className="container">
+        <h2 className="text-center">Interested In Working With Us? </h2>
+        <div className="row center-xs center-sm">
+          <div className="col-xs-12 col-sm-8 ">
+            <div className="bid-input-wrapper">
+              <ContactForm />
             </div>
           </div>
-        </PageSetup>
+        </div>
       </div>
     );
   }
