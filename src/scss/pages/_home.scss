@@ -41,12 +41,18 @@
   display: inline-block;
   padding: 15px 20px;
   text-align: center;
-  background-color: color(brand, secondary);
+  background-color: #2470D3;
   color: color(greyscale, white);
   font-weight: 600;
   border-radius: 4px;
   outline: 0;
   border: 0;
+
+  &:hover {
+    background-color: darken(#2470D3, 15%);
+    color: color(greyscale, white);
+    @include transform(translateY(3px));
+  }
 }
 
 .btn-cta-2 {
@@ -329,26 +335,26 @@ img.funnel {
 
   @include keyframes(Move1) {
     0% {
-      @include transform(translate3d(2px, 0, 0));
+      @include transform(translate3d(5px, 0, 0));
     }
     50% {
-      @include transform(translate3d(0, 3px, 0));
+      @include transform(translate3d(0, 6px, 0));
     }
     100% {
-      @include transform(translate3d(2px, 0, 0));
+      @include transform(translate3d(5px, 0, 0));
 
     }
   }
 
   @include keyframes(Move2) {
     0% {
-      @include transform(translate3d(0, 3px, 0));
+      @include transform(translate3d(0, 6px, 0));
     }
     50% {
-      @include transform(translate3d(4px, 0, 0));
+      @include transform(translate3d(8px, 0, 0));
     }
     100% {
-      @include transform(translate3d(0, 3px, 0));
+      @include transform(translate3d(0, 6px, 0));
 
     }
   }

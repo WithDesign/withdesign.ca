@@ -11,6 +11,10 @@ import GetStarted from './containers/GetStarted';
 import Error404 from './containers/404';
 import Research from './containers/Research';
 
+function reload() {
+//  window.location.reload();
+};
+
 const routes = (
   <Route onUpdate={() => window.scrollTo(0, 0)} path="/" component={App}>
     <IndexRoute component={HomePage} />
@@ -20,7 +24,7 @@ const routes = (
     <Route path="partners" component={Partners} />
     <Route path="about" component={About} />
     <Route path="research" component={Research} />
-    <Route path="start" component={GetStarted} />
+    <Route path="start" component={GetStarted} onEnter={reload()}/>
     <Route path="404" component={Error404} />
     <Redirect from="*" to="/404" />
   </Route>

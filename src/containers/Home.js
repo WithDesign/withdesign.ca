@@ -217,30 +217,27 @@ class Home extends Component {
                     </aside>
                   </div>
                   <div className="col-xs-12 col-sm-8">
-                    <div className="partner-single case">
-                      <a className="" rel="noopener noreferrer" target="_blank" href="https://logoswithdesign.com">
+                    <div className="partner-single case case-cryptobyte">
+                      <button className="clear-button" onClick={() => this.handleClick('modal-1')}>
                         <img
                           className="img-responsive"
-                          src="./img/interfacewithdesign.png"
+                          src="./img/projects/crypto/cryptobyte-banner.png"
                           alt="Logo Example"
-                        />  Title here
-                      </a>
+                        />  CryptoByte <br />
+                        <span className="weight-300">Building a product to go-to-market.</span>
+                      </button>
                       <p>
-                        We'll help you produce clean, professional and world class
-                        looking products without the hassle. Stop wasting precious
-                        time on freelance job boards and get world class work done
-                        insanely fast. We'll take great care of all your mobile & web
-                        UI design projects.
-                      </p><button className="link" onClick={() => this.handleClick('modal-1')}>View 'Name Here' Case</button>
+                        We assisted cryptobyte by providng new insight and skills to bring its product ideas to life by creating a sleek brand, product and onboarding funnel to generate a high volumne of signups. Take a peak and see how we took this product idea to the next level!
+                      </p><button className="link" onClick={() => this.handleClick('modal-1')}>Learn about Cryptobyte Project</button>
                     </div>
                     <div className="partner-single case">
-                      <a className="" rel="noopener noreferrer" target="_blank" href="https://logoswithdesign.com">
+                      <button className="clear-button" onClick={() => this.handleClick('modal-2')}>
                         <img
                           className="img-responsive"
                           src="./img/interfacewithdesign.png"
                           alt="Logo Example"
                         />  Title here
-                      </a>
+                      </button>
                       <p>
                         We'll help you produce clean, professional and world class
                         looking products without the hassle. Stop wasting precious
@@ -290,49 +287,6 @@ class Home extends Component {
                 <hr />
               </div>
             </div>
-            {/* <div className="">
-              <div className="client-brands">
-                <h5 className="text-center weight-300 no-margin">TRUSTED BY THE WORLD'S SMARTEST COMPANIES</h5>
-                <div className="logo-wrapper pad-30-top pad-10-bottom">
-                  <div>
-                    <img
-                      src="./img/logos/LogosWithDesign-2.svg"
-                      alt="Logo Example"
-                    />
-                  </div>
-                  <div>
-                    <img
-                      src="./img/logos/LogosWithDesign-2.svg"
-                      alt="Logo Example"
-                    />
-                  </div>
-                  <div>
-                    <img
-                      src="./img/logos/LogosWithDesign-3.svg"
-                      alt="Logo Example"
-                    />
-                  </div>
-                  <div>
-                    <img
-                      src="./img/logos/LogosWithDesign-4.svg"
-                      alt="Logo Example"
-                    />
-                  </div>
-                  <div>
-                    <img
-                      src="./img/logos/LogosWithDesign-5.svg"
-                      alt="Logo Example"
-                    />
-                  </div>
-                  <div>
-                    <img
-                      src="./img/logos/LogosWithDesign-6.svg"
-                      alt="Logo Example"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div> */}
             <div className="partner-wrapper container">
               <h2>Our Brand Partners</h2>
               <p>
@@ -399,29 +353,83 @@ class Home extends Component {
             </h6>
             <div className="text-center mar-30-bottom">
               <Link
-                className="btn btn-cta-2 pad-10"
+                className="btn btn-cta-1 pad-10"
                 to="/start"
               >
-                Submit A Brief!
+                Lets Start Today!
               </Link>
             </div>
           </div>
         </div>
         <Footer />
         {(activeModal !== 'clear' || activeModal === '') && (
-        <div className="brief-modal">
+        <div className="brief-modal case-modal">
           <div className="wrapper">
             <button className="close-btn" onClick={() => this.handleClick('clear')}>
               <i className="fa fa-close" />
             </button>
             {(activeModal === 'modal-1') &&
             <div>
-              <div className="brief-header">
-                <h3 className="weight-400 text-upper mar-10-bottom no-mar-top">
-                  show
-                </h3>
+              <img
+                className="img-responsive case-banner-img"
+                src="./img/projects/crypto/cryptobyte-banner.png"
+                alt="Logo Example"
+              />
+              <div className="container">
+                <h2 className="weight-300 no-mar-top">CryptoBye is a crypto currency exchange built for specifically users who are new to crypto currency markets and exchanges. </h2>
+                <h4>The Challenge</h4>
+                <p>When approched With Design, they had a very board plan built around creating a new crypto currency exchnage specifically built for new users within the crypto currecy niche. To better identify the deliverables of the project, With Design started research into what the client is tring to achive for the nerw product and what type of work would be required to go-to-market.
+                <br />
+                In doing so we built initially a go-to-market plan that would include a variety of work from With Deisgn. Some of the work included  would be building a new brand, designing a product to be later developed into a full application, and designing a onboarding flow that would be later optimized for greater lift once live.</p>
+                <h4>How We Built The Solution</h4>
+                <h5>Build The Brand</h5>
+                <div className="row">
+                  <div className="col-xs-12 col-sm-4">
+                    <p>Some text here</p>
+                  </div>
+                  <div className="col-xs-12 col-sm-8">
+                    <figure className="no-margin">
+                      <img className="img-responsive" src="./img/projects/crypto/brand-development.png" alt="" />
+                      <figcaption className="text-center"><small>A brief overview of the process to create a brand mark.</small></figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <h5>Craft The Product</h5>
+                <div className="row">
+                  <div className="col-xs-12 col-sm-4">
+                    <p>some text</p>
+                  </div>
+                  <div className="col-xs-12 col-sm-8">
+                    <figure className="no-margin">
+                      <img className="img-responsive img-round" src="./img/sketch/sketchbook.png" alt="" />
+                    </figure>
+                  </div>
+                </div>
+                <p>Some more text explaining the product</p>
+                {/* Display some simple wire frames -- Workflow's */}
+                <h5>The Design The Funnel</h5>
+                <p>Some text goes here</p>
+                <div className="row no-margin">
+                  <div className="col-xs-6 no-pad-left">
+                    <figure className="no-margin">
+                      <img className="img-responsive" src="./img/projects/crypto/wireframe.jpg" alt="" />
+                      <figcaption><small>This is a sketch taken from the hundreds created in the product design process.</small></figcaption>
+                    </figure>
+                  </div>
+                  <div className="col-xs-6 no-pad-right">
+                    <figure className="no-margin">
+                      <img className="img-responsive" src="./img/projects/crypto/lander.png" alt="" />
+                      <figcaption><small>This is a sketch taken from the hundreds created in the product design process.</small></figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <h4>The Final Product</h4>
+                <p>Some text</p>
+                <figure className="no-margin">
+                  <img className="img-responsive" src="./img/projects/crypto/mockup.png" alt="" />
+                  <figcaption className="text-center"><small>A small sample of screens from within app.</small></figcaption>
+                </figure>
               </div>
-              <div className="pad-20" />
             </div>}
             {(activeModal === 'modal-2') &&
             <div>
@@ -430,7 +438,33 @@ class Home extends Component {
                   1
                 </h3>
               </div>
-              <div className="pad-20" />
+              <div className="container">
+                <p>CryptoBye is a crypto currency exchange built for specifically users who are new to crypto currency markets and exchanges. </p>
+                <h4>The Challenge</h4>
+                <p>When approched With Design, they had a very board plan built around creating a new crypto currency exchnage specifically built for new users within the crypto currecy niche. To better identify the deliverables of the project, With Design started research into what the client is tring to achive for the nerw product and what type of work would be required to go-to-market.
+                <br />
+                In doing so we built initially a go-to-market plan that would include a variety of work from With Deisgn. Some of the work included  would be building a new brand, designing a product to be later developed into a full application, and designing a onboarding flow that would be later optimized for greater lift once live.</p>
+                <h4>How We Built The Solution</h4>
+                <h5>The Brand</h5>
+                {/* Create some basic images on building logo */}
+                {/* Example of building a user analysis */}
+                <h5>The Product</h5>
+                <p>Some text</p>
+                <figure className="no-margin">
+                  <img src="./img/projects/crypto/sketch.png" alt="" />
+                  <figcaption>This is a sketch taken from the hundreds created in the product design process.</figcaption>
+                </figure>
+                <p>Some more text explaining the product</p>
+                {/* Display some simple wire frames -- Workflow's */}
+                <h5>The Funnel</h5>
+                <p />
+                <h4>The Final Product</h4>
+                <p>Some text</p>
+                <figure className="no-margin">
+                  <img src="./img/projects/crypto/mockup.png" alt="" />
+                  <figcaption>This is a sketch taken from the hundreds created in the product design process.</figcaption>
+                </figure>
+              </div>
             </div>}
           </div>
         </div>

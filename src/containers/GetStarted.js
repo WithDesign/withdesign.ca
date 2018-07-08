@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import PageSetup from '../components/PageSetup';
 import Bid from '../components/Bid';
+import Toggle from '../components/Toggle';
 
 const propTypes = {
   className: PropTypes.string,
@@ -13,6 +14,16 @@ const defaultProps = {
 };
 
 class GetStarted extends Component {
+
+  componentDidMount () {
+    const script = document.createElement("script");
+
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+  }
+
   render() {
     const {
       className,
@@ -84,7 +95,11 @@ class GetStarted extends Component {
             </div>
             <div className="col-xs-12 col-md-6 no-pad">
               <div className="started-form-wrapper">
-                <Bid />
+                <div className="calendly-inline-widget" data-url="https://calendly.com/withdesign" style={{minWidth:320+'px',height:400+'px'}} />
+                <hr />
+                <Toggle btnClass="clear-button" btnTextOpen="- Or send us a message" btnTextClose="+ Or send us a message">
+                  <Bid />
+                </Toggle>
               </div>
             </div>
           </div>

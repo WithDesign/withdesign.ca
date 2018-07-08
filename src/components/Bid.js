@@ -123,7 +123,7 @@ class BidForm extends Component {
   render() {
     return (
       <div>
-        <div className="page-intro brief-header">
+        {/* <div className="page-intro brief-header">
           <h3 className="weight-400 text-upper mar-10-bottom no-mar-top">
             Send us a message on how we can help!
           </h3>
@@ -143,13 +143,13 @@ class BidForm extends Component {
               </a>
             </small>
           </p>
-        </div>
-        <div className="pad-20 form">
+        </div> */}
+        <div className="pad-20">
           <form
             className="bid-input-wrapper pad-30-bottom" action="https://formspree.io/withdesignagency@gmail.com"
             method="POST" id="formContact"
           >
-            <label className="bid-input-label" htmlFor="name">What is your name? *</label>
+            {/* <label className="bid-input-label" htmlFor="name">What is your name? *</label>
             <input
               className="bid-input"
               type="text"
@@ -159,7 +159,7 @@ class BidForm extends Component {
               placeholder="Enter your name."
               required
               autoFocus
-            />
+            /> */}
             <label className="bid-input-label" htmlFor="email">What is your email address? *</label>
             <input
               className="bid-input"
@@ -170,7 +170,17 @@ class BidForm extends Component {
               onChange={this.handleChange}
               required
             />
-            <label className="bid-input-label" htmlFor="date">Choose a preferred date & time a chat?</label>
+            <label className="bid-input-label" htmlFor="description">Your Message</label>
+            <textarea
+              className="bid-input"
+              name="description"
+              placeholder="The more info the better."
+              rows="5"
+              cols="50"
+              value={this.state.message}
+              onChange={this.handleChangeMsg}
+            />
+            {/* <label className="bid-input-label" htmlFor="date">Choose a preferred date & time a chat?</label>
             <input
               className="bid-input"
               type="date"
@@ -178,8 +188,8 @@ class BidForm extends Component {
               value={this.state.bizName}
               onChange={this.handleChangeBiz}
             />
-            <br />
-            <select
+            <br /> */}
+            {/* <select
               className="bid-input pad-10"
               type="time"
               name="appt-time"
@@ -191,9 +201,9 @@ class BidForm extends Component {
               <option value="">12:00-2:00pm PST</option>
               <option value="">2:00-6:00pm PST</option>
             </select>
-            <br />
+            <br /> */}
             <input className="clear-button btn btn-submit mar-30-top text-white" type="submit" value="Send" />
-            <p>Once submitted, please allow up to 24 hours for a responce. Thanks!</p>
+            {/* <p>Once submitted, please allow up to 24 hours for a responce. Thanks!</p> */}
             {/* <label className="bid-input-label" htmlFor="BizName">What's the name your business?</label> */}
             {/* <input
               className="bid-input"
