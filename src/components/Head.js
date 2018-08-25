@@ -11,9 +11,9 @@ const propTypes = {
 };
 
 const defaultProps = {
-  title: 'Logos With Design | Free open source quality ready made marks & logos | Purchase a custom logo',
-  description: 'With Design: Design Agency | Download a free logo from the open source library below, or purchase a unique logo today.',
-  image: './img/cover.png',
+  title: 'With Design | STRATEGIZE, DEVELOP, AND OPTIMIZE YOUR BRANDS HIDDEN POTENTIAL.',
+  description: 'A guaranteed of delivery of new marketing experiences and ideas with insights about your customers to dramatically improve your growth.',
+  image: 'https://withdesign.ca/img/cover.png',
 };
 
 function PageHead({

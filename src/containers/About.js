@@ -21,12 +21,11 @@ class About extends Component {
       <div className={`${className}`}>
         <PageSetup
           className="about-wrapper"
-          title=""
-          description=""
-          url=""
+          title="With Design | About US"
+          description="We are a small ambitious digital agency who specialize in the ecommerce space. We have past experience working with some of the top brands & agencies in the business. We are also Canadien!"
+          url="https://withdesign.ca/about"
           h1="About"
-          sub="We partner with the best & the brightest designers & marketers
-          to meet your every expectations."
+          sub="A small ambitious digital agency who specialize in the ecommerce space."
         >
           <div className="row">
             {/* <div className="col-xs-12 col-md-4 pos-rel">
@@ -47,31 +46,20 @@ class About extends Component {
                     Our Mission
                   </p>
                 <p>
-                    We'll help you produce clean, professional and world class
-                    looking products without the hassle. Stop wasting precious
-                    time on freelance job boards and get world class work done
-                    insanely fast. We'll take great care of all your mobile & web
-                    UI design projects.
-                  </p>
+                  At With Design, we strive to help any business reach their goals no matter how small they may be. We believe in partnering with the best in the industry as that is the only way to achieve top results with a balance of speed of execution and quality.
+                </p>
                 <p className="h6">
                     Who We Are
                   </p>
                 <p>
-                    We'll help you produce clean, professional and world class
-                    looking products without the hassle. Stop wasting precious
-                    time on freelance job boards and get world class work done
-                    insanely fast. We'll take great care of all your mobile & web
-                    UI design projects.
+                  We are a small ambitious digital agency who specialize in the ecommerce space. We have past experience working with some of the top brands & agencies in the business. We are also Canadien!
                   </p>
                 <p className="h6">
                     Our Guarentee
                   </p>
                 <p>
-                    We'll help you produce clean, professional and world class
-                    looking products without the hassle. Stop wasting precious
-                    time on freelance job boards and get world class work done
-                    insanely fast. We'll take great care of all your mobile & web
-                    UI design projects.
+                  <b>1. </b>Nothing is outsourced to overseas, everything is completed in house. <br />
+                  <b>2. </b>If your not happy, we are not happy! We will work with you until you are ecstatic about our results.
                   </p>
               </div>
             </div>

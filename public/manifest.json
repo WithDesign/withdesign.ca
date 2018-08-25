@@ -1,14 +1,14 @@
 {
-  "name": "InterfaceWithDesign",
+  "name": "WithDesign",
   "short_name": "WithDesign",
   "lang": "en-US",
-  "version": "1.0.0",
-  "manifest_version": 2,
+  "version": "3.0.1",
+  "manifest_version": 3,
   "display": "standalone",
   "start_url": ".",
-  "background_color": "#082E41",
-  "theme_color": "#082E41",
-  "description": "Interface With Design can turn your sketches and wireframes into beautiful UI concepts or production-ready UI designs with unlimited revisions & on-demand requests. We can also handle any branding needs you business or startup may have. Start with us today!",
+  "background_color": "#DA2536",
+  "theme_color": "#DA2536",
+  "description": "A guaranteed of delivery of new marketing experiences and ideas with insights about your customers to dramatically improve your growth.",
   "icons": [{
      "src": "\/favicon-36.png",
      "sizes": "36x36",
@@ -47,6 +47,6 @@
   }],
   "related_applications": [{
     "platform": "web",
-    "url": "http://interfacewithdesign.com"
+    "url": "http://withdesign.ca"
   }]
 }

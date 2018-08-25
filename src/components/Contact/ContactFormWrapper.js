@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import Header from '../Header';
 import ContactForm from './ContactForm';
-import Footer from '../Footer';
 import PageSetup from '../PageSetup';
 
 class ContactFormWrapper extends Component {
@@ -43,12 +41,11 @@ class ContactFormWrapper extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-8 ">
               <div className="bid-input-wrapper">
-                <ContactForm />
+                <ContactForm /><br /><br />
               </div>
             </div>
             <div className="col-xs-12 col-sm-4">
-              <p>We partner with the best & the brightest designers & marketers
-                  to meet your every expectations.</p>
+              <p>If you have any question, feel free to send us a message.</p>
             </div>
           </div>
         </PageSetup>

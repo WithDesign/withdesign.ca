@@ -42,12 +42,12 @@ class Header extends Component {
           <img className="img-responsive pull-left" src="./img/logo-white.svg" alt="With Design Agency" />
         </a>
         <nav className={`${(isMobile || isTab) ? 'mobile-nav' : ''} ${activeMenu ? 'mobile-nav-show' : 'mobile-nav-hidden'}`}>
-          <Link className="btn pull-right cta" to="/start">Get Started</Link>
-          <Link className="btn pull-right" to="/partners">Partners</Link>
-          <Link className="btn pull-right" to="/research">Research</Link>
-          <Link className="btn pull-right" to="/about">About</Link>
-          <Link className="btn pull-right" to="/solutions">Solutions</Link>
-          <Link className="btn pull-right" to="/">Home</Link>
+          <Link className="btn pull-right cta" to="/start" title="Get Started">Get Started</Link>
+          <Link className="btn pull-right" to="/about" title="About Us">About</Link>
+          <Link className="btn pull-right" to="/research" title="Research">Research</Link>
+          <a className="btn pull-right" href="https://blog.withdesign.ca" title="Blog With Design">Blog</a>
+          <Link className="btn pull-right" to="/solutions" title="Solutions">Solutions</Link>
+          <Link className="btn pull-right" to="/" title="Home">Home</Link>
         </nav>
       </div>
     );

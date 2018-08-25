@@ -33,11 +33,9 @@ class GetStarted extends Component {
       <div className={`${className}`}>
         <PageSetup
           className="started-wrapper"
-          title=""
-          description=""
-          url=""
-          h1=""
-          sub=""
+          title="With Design | Get Started Today! | Guarnteed 15 minute online chat with our Managing Partners"
+          description="We believe each business should have a unique solution built for them. The best way to do that is through a direct conversation to build your custom strategy to set your business apart in the competitive market space. Start working with us today to discover your hidden brand potential and optimize all your customer experiences."
+          url="https://withdesign.ca/get-started"
           container={false}
         >
           <div className="row middle-md no-margin pos-rel">
@@ -46,16 +44,13 @@ class GetStarted extends Component {
                 <img className="img-responsive mega-image" src="./img/mega.svg" alt="Get Started" />
                 <img className="img-responsive mega-image" src="./img/mega.svg" alt="Get Started" />
                 <h2 className="weight-600 text-upper mar-10-bottom">
-                  Send us a message on how we can help!
+                  Setup a quick introduction chat!
                 </h2>
                 <h6 className="sub-text weight-400">
-                  Start working with us today to unlock your brands hidden
-                  potential.
+                  Guarnteed 15 minute online chat with our Managing Partners.
                 </h6>
                 <p className="weight-300 text-center">
-                  We'll help you produce clean, professional and world class
-                  looking products without the hassle. Stop wasting precious time
-                  on freelance job boards and
+                  Here at With Design we believe each business should have a unique solution built for them. The best way to do that is through a direct conversation to build your custom strategy to set your business apart in the competitive market space. Start working with us today to discover your hidden brand potential and optimize all your customer experiences.
                 </p>
               </div>
               <div className="start-client">

@@ -11,12 +11,11 @@ function Policy({ className }) {
     <div className={`${className}`}>
       <PageSetup
         className="policy-wrapper"
-        title=""
-        description=""
-        url=""
+        title="With Design | Policies "
+        description="Our Private Policy at With Design."
+        url="https://withdesign.ca/policy"
         h1="Policy & Terms"
-        sub="We partner with the best & the brightest designers & marketers
-        to meet your every expectations."
+        sub="We keep your privacy information private."
       >
         <div className="iub_content legal_pp">
           <div className="iub_header">

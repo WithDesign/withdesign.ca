@@ -1,10 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router';
+// import { Link } from 'react-router';
 import SubscribeFrom from 'react-mailchimp-subscribe';
 import PageSetup from '../components/PageSetup';
-import Toggle from '../components/Toggle';
+// import Toggle from '../components/Toggle';
 
 const propTypes = {
   className: PropTypes.string,
@@ -28,9 +28,9 @@ class Research extends Component {
       <div className={`${className}`}>
         <PageSetup
           className="research-wrapper"
-          title=""
-          description=""
-          url=""
+          title="With Design | Research | We are committed to educating others in eCommerce optimization and design."
+          description="With Design eCommerce and design research including in depth case studies on our projects, case studies and updates."
+          url="https://withdesign.ca/research"
           container={false}
         >
           <div className="banner pos-rel">
@@ -39,10 +39,7 @@ class Research extends Component {
                 Cases, Research & Updates
               </h1>
               <h2 className="mar-15-top mar-20-bottom weight-400 text-center">
-                Increase your conversion rate, revenue & achieve your goals by partnering with one
-                of the leading optimization & design marketers in the industry.
-                Increase your conversion rate, revenue & achieve your goals by partnering with one
-                of the leading optimization & design marketers in the industry.
+                In depth case studies on our projects, case studies, research and updates. We are committed to research and educating others in the industry. If you would like to be updated about any new posts, enter your email below.
               </h2>
               <div className="mail">
                 {/* <label>
@@ -100,7 +97,8 @@ class Research extends Component {
               </div>
               <div className="col-xs-12 col-sm-10">
                 <h2 id="cases">Cases</h2>
-                <div className="row no-margin">
+                <p><i>Comming Soon...</i></p>
+                {/* <div className="row no-margin">
                   <div className="col-xs-12 col-sm-6">
                     <div className="partner-single">
                       <a className="link" rel="noopener noreferrer" target="_blank" href="https://interfacewithdesign.com">
@@ -139,7 +137,7 @@ class Research extends Component {
                       <a className="link" rel="noopener noreferrer" target="_blank" href="https://interfacewithdesign.com">Go To Partner</a>
                     </div>
                   </div>
-                </div>
+                </div>*/}
                 <div className="research pad-30-bottom">
                   <h2 id="research">Research</h2>
                   <article className="no-mar-bottom no-pad-bottom">
@@ -150,76 +148,7 @@ class Research extends Component {
                 </div>
                 <div className="updates">
                   <h2 id="updates">Updates</h2>
-                  <article className="update withdesign-release">
-                    <div className="article-banner">
-                      <h4>Withdesign.ca Site Release</h4>
-                    </div>
-                    <div className="row no-margin">
-                      <div className="col-xs-12 col-md-3">
-                        <div className="date">12/12/18</div>
-                        <div className="author">
-                          <img className="img/responsive" src="./img/wd.svg" alt="author" />Cody | Design Manager</div>
-                      </div>
-                      <div className="col-xs-12 col-md-9 content">
-                        <p>
-                          We'll help you produce clean, professional and world class
-                          looking products without the hassle. Stop wasting precious
-                          time on freelance job boards and get world class work done
-                          insanely fast. We'll take great care of all your mobile & web
-                          UI design projects.
-                        </p>
-                        <p>
-                          We'll help you produce clean, professional and world class
-                          looking products without the hassle. Stop wasting precious
-                          time on freelance job boards and get world class work done
-                          insanely fast. We'll take great care of all your mobile & web
-                          UI design projects.
-                        </p>
-                        <p>
-                          We'll help you produce clean, professional and world class
-                          looking products without the hassle. Stop wasting precious
-                          time on freelance job boards and get world class work done
-                          insanely fast. We'll take great care of all your mobile & web
-                          UI design projects.
-                        </p>
-                      </div>
-                    </div>
-                  </article>
-                  <article className="update withdesign-release">
-                    <div className="article-banner">
-                      <h4>Growing Our Solution Offerings</h4>
-                    </div>
-                    <div className="row no-margin">
-                      <div className="col-xs-12 col-md-3">
-                        <div className="date">12/12/18</div>
-                        <div className="author">
-                          <img className="img/responsive" src="./img/wd.svg" alt="author" />Cody | Design Manager</div>
-                      </div>
-                      <div className="col-xs-12 col-md-9 content">
-                        <p>
-                          We'll help you produce clean, professional and world class
-                          looking products without the hassle. Stop wasting precious
-                          time on freelance job boards and get world class work done
-                          insanely fast. We'll take great care of all your mobile & web
-                          UI design projects.
-                        </p>
-                        <p>
-                          We'll help you produce clean, professional and world class
-                          looking products without the hassle. Stop wasting precious
-                          time on freelance job boards and get world class work done
-                          insanely fast. We'll take great care of all your mobile & web
-                          UI design projects.
-                        </p>
-                        <p>
-                          We'll help you produce clean, professional and world class
-                          looking products without the hassle. Stop wasting precious
-                          time on freelance job boards and get world class work done
-                          insanely fast. We'll take great care of all your mobile & web
-                          UI design projects.
-                        </p>
-                      </div>
-                    </div>
-                  </article>
+                  <a className="btn btn-cta-2 pad-15 mar-15-bottom" rel="noopener noreferrer" target="_blank" href="https://blog.withdesign.ca">Go To Blog</a>
                 </div>
               </div>
             </div>
