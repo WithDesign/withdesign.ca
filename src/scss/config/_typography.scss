@@ -6,15 +6,15 @@
 $typography: (
   typography: (
     // Default Sizes
-    default-font-size: 16px,
+      default-font-size: 16px,
     default-line-height: 20px,
     baseline: 24px,
     fonts: (
       // Main Fonts For Page
-      heading: '\'Martel\', serif',
-      primary: '\'Montserrat\', sans-serif',
-      brand: '\'Montserrat\', sans-serif',
-      awesome: '\'FontAwesome\', sans-serif'
+        heading: "'Martel', serif",
+      primary: "'Montserrat', sans-serif",
+      brand: "'Montserrat', sans-serif",
+      awesome: "'FontAwesome', sans-serif"
     ),
     heading: (
       h1: (
@@ -48,14 +48,14 @@ $typography: (
       h5: (
         level: 5,
         font-size: 24px,
-        line-height: 28px,
+        line-height: 32px,
         weight: 700,
         transform: initial
       ),
       h6: (
         level: 6,
         font-size: 18px,
-        line-height: 22px,
+        line-height: 25px,
         weight: 700,
         transform: initial
       ),
@@ -69,7 +69,9 @@ $typography: (
       default: (
         level: auto,
         font-size: $base-font-size,
-        line-height: ($base-font-size + 4px),
+        line-height: (
+          $base-font-size + 4px
+        ),
         weight: 400,
         transform: initial
       )
