@@ -6,20 +6,21 @@
   position: relative;
   padding: 15px 25px;
   color: color(greyscale, white);
-  border: { //4px solid darken(color(brand, success), 30%)
+  border: {
+    //4px solid darken(color(brand, success), 30%)
     radius: 4px;
-  };
-  background: #2470D3;
+    bottom: 4px solid darken(#2470d3, 15%);
+  }
+  background: #2470d3;
   font-weight: 600;
 
   @include shadow(rd, 3);
-  @extend .clear-button,
-  .transition;
+  @extend .clear-button, .transition;
   @include font-size(18px);
 
   &:hover {
     color: color(greyscale, white);
-    background-color: darken(#2470D3, 15%) !important;
+    background-color: darken(#2470d3, 15%) !important;
 
     @include transform(translateY(3px));
   }
@@ -36,7 +37,7 @@
   padding: 20px;
   background-color: color(brand, secondary);
 
-  @include calc(height, 100vh, '100vh - 88px');
+  @include calc(height, 100vh, "100vh - 88px");
   @include breakpoint(max-width breakpoint-value(lg)) {
     @include font-size(24px);
   }

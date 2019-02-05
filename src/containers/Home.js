@@ -568,7 +568,7 @@ class Home extends Component {
             </h6>
             <div className="text-center mar-30-bottom">
               <Link
-                className="btn btn-cta-2 pad-10"
+                className="btn btn-cta-1 pad-10"
                 to="/start"
                 title="Inquire Today!"
               >
